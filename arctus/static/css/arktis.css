@@ -1,0 +1,89 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+html {
+  background: #d3d9e0;
+}
+html * {
+  color: black;
+  font-family: "Inter";
+  transition: 0.2s;
+}
+
+body {
+  background: #ebf0f6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #666bff;
+}
+header * {
+  color: white;
+}
+header .brand {
+  display: flex;
+  align-items: center;
+}
+header .brand img {
+  height: 50px;
+  margin-right: 20px;
+}
+header .brand h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+header .links {
+  display: flex;
+  align-items: center;
+}
+header .links a {
+  font-size: 18px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+header .links a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3647058824);
+}
+header .links .bi {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+main {
+  margin: 3rem;
+}
+
+footer {
+  padding-top: 5rem;
+  padding-left: 3rem;
+  background: #d3d9e0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+footer * {
+  opacity: 0.8;
+}
+footer i {
+  margin-right: 0.5rem;
+}
+a {
+  text-decoration: none;
+}
+
+p a, footer a {
+  text-decoration: underline;
+}
+p a:hover, footer a:hover {
+  opacity: 0.7;
+}
+
+mark {
+  margin-left: 5px;
+  color: #666bff;
+  border-radius: 5px;
+  background: white;
+}/*# sourceMappingURL=arktis.css.map */

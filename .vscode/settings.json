@@ -6,10 +6,16 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        ".vscode": true
+        ".vscode": true,
+        "shop/ecommerce/__pycache__": true,
+        "arctus/static/css/arktis.css": true,
+        "arctus/static/css/arktis.css.map": true
     },
     "hide-files.files": [
-        ".vscode"
+        ".vscode",
+        "shop/ecommerce/__pycache__",
+        "arctus/static/css/arktis.css",
+        "arctus/static/css/arktis.css.map"
     ],
     "cSpell.words": [
         "arctus"
