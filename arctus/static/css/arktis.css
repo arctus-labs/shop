@@ -11,8 +11,15 @@ html * {
 
 body {
   background: #ebf0f6;
+  margin: 2rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2901960784);
 }
 
+@media (max-width: 1000px) {
+  body {
+    margin: 0;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -58,8 +65,7 @@ main {
 }
 
 footer {
-  padding-top: 5rem;
-  padding-left: 3rem;
+  padding: 3rem;
   background: #d3d9e0;
   display: grid;
   grid-template-columns: auto auto auto;

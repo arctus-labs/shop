@@ -12,6 +12,12 @@ html
 
 body
     background: $bg
+    margin: 2rem
+    box-shadow: 10px 10px 20px $shadow
+    
+@media (max-width: 1000px)
+    body
+        margin: 0
 
 header
     display: flex
@@ -56,8 +62,8 @@ main
     margin: 3rem
 
 footer
-    padding-top: 5rem
-    padding-left: 3rem
+    padding: 3rem
+
     background: $bg-light
 
     *

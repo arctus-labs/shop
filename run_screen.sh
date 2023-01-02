@@ -1,0 +1,1 @@
+screen -S arctus sh run_loop.sh

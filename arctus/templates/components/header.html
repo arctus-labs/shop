@@ -7,17 +7,16 @@
     </a>
 
     <div class="links">
-        <a href="/shop">
-            shop
-        </a>
-        <a href="/about">
-            about us
-        </a>
-        <a href="mailto:info@arctus.me">
-            contact
-        </a>
-        <a href="/cart">
-            <i class="bi bi-cart"></i>
-        </a>
+        {% for link in nav_links %}
+            <a
+                class="{{ link.status }} {{ link.class }}"
+                style="{{ link.css }}"
+                href="{{ link.target }}"
+                {{ ' target="_blank"' if link.is_external else '' }}
+            >
+                <i class="bi bi-{{ link.icon }}"></i>
+                {{ link.title }}
+            </a>
+        {% endfor %}
     </div>
 </header>
