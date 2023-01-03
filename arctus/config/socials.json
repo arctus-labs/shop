@@ -1,0 +1,14 @@
+[
+    {
+        "platform": "Instagram",
+        "icon": "instagram",
+        "url": "https://instagram.com/arctus-labs",
+        "tag": "@arctus-labs"
+    },
+    {
+        "platform": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/arctus-labs",
+        "tag": "@arctus-labs"
+    }
+]

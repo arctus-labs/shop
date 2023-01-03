@@ -1,0 +1,18 @@
+:root {
+  --glow: rgba(255, 255, 255, 0.3647058824);
+  --shadow: rgba(0, 0, 0, 0.2901960784);
+}
+
+html.dark {
+  --fg: #ebf0f6;
+  --accent: #666bff;
+  --bg: #080808;
+  --bg-light: #1c1b1e;
+}
+
+html.light {
+  --fg: #080808;
+  --accent: #666bff;
+  --bg: #ebf0f6;
+  --bg-light: #d3d9e0;
+}/*# sourceMappingURL=theme.css.map */

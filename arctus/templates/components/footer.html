@@ -2,30 +2,28 @@
     <section>
         <h3>arctus</h3>
         <p>&copy;2022-2023 Arctus Labs.</p>
+        <a onclick="toggleTheme();" style="cursor: pointer">
+            <i id="themeTogglerIcon" class="bi bi-sun"></i>Toggle Theme
+        </a>
     </section>
 
     <section>
         <h3>Socials</h3>
-        <a title="Arctus at GitHub" href="https://github.com/arctus-labs" target="_blank">
-            <i class="bi bi-github"></i>GitHub @arctus-labs
-        </a>
-        <br>
-        <a title="Arctus at Instagramm" href="https://instagram.com/arctus-labs" target="_blank">
-            <i class="bi bi-instagram"></i>Instagram @arctus-labs
-        </a>
+        {% for social in socials %}
+            <a title="Arctus at {{ social.platform }}" href="{{ social.url }}" target="_blank">
+                <i class="bi bi-{{ social.icon }}"></i>{{ social.platform }} {{ social.tag }}
+            </a>
+            <br>
+        {% endfor %}
     </section>
 
     <section>
-        <h3>Useful Links</h3>
-        <a href>
-            Help pages
+        <h3>Links</h3>
+        <a href="/">
+            Home
         </a>
         <br>
-        <a href>
-            Community forum
-        </a>
-        <br>
-        <a href>
+        <a href="/contact">
             Contact the team
         </a>
     </section>

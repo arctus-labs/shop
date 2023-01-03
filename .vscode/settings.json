@@ -9,13 +9,19 @@
         ".vscode": true,
         "shop/ecommerce/__pycache__": true,
         "arctus/static/css/arktis.css": true,
-        "arctus/static/css/arktis.css.map": true
+        "arctus/static/css/arktis.css.map": true,
+        "arctus/static/css/theme.css.map": true,
+        "arctus/static/css/theme.css": true,
+        "arctus/__pycache__": true
     },
     "hide-files.files": [
         ".vscode",
         "shop/ecommerce/__pycache__",
         "arctus/static/css/arktis.css",
-        "arctus/static/css/arktis.css.map"
+        "arctus/static/css/arktis.css.map",
+        "arctus/static/css/theme.css.map",
+        "arctus/static/css/theme.css",
+        "arctus/__pycache__"
     ],
     "cSpell.words": [
         "arctus"
