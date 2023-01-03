@@ -5,14 +5,14 @@
 
 html.dark {
   --fg: #ebf0f6;
-  --accent: #666bff;
+  --accent: #3185e6;
   --bg: #080808;
   --bg-light: #1c1b1e;
 }
 
 html.light {
   --fg: #080808;
-  --accent: #666bff;
+  --accent: #3185e6;
   --bg: #ebf0f6;
   --bg-light: #d3d9e0;
 }/*# sourceMappingURL=theme.css.map */

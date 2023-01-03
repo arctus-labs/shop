@@ -21,12 +21,12 @@ def injector():
     )
 
 @app.route('/')
-def index():
-    return flask.redirect('/shop')
+def home():
+    return flask.render_template('home.html', title='Home')
 
 @app.route('/shop')
 def shop():
-    return flask.render_template('home.html', title='Shop')
+    return flask.render_template('shop.html', title='Shop')
 
 @app.route('/about')
 def about():

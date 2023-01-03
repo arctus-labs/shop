@@ -1,4 +1,8 @@
-[
+[    
+    {
+        "target": "/",
+        "title": "Home"
+    },
     {
         "target": "/shop",
         "title": "Shop"

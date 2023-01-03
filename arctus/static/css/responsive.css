@@ -1,0 +1,15 @@
+@media (max-width: 700px) {
+  header h1 {
+    display: none;
+  }
+  footer {
+    text-align: center;
+    display: block;
+  }
+  body {
+    box-shadow: none;
+  }
+  html {
+    background: var(--bg-light);
+  }
+}/*# sourceMappingURL=responsive.css.map */

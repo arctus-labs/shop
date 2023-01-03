@@ -6,26 +6,29 @@ html
         font-family: 'Inter'
         transition: 0.2s
 
-    background: var(--bg)
+    background: none
 
 body
-    background: var(--bg-light)
-    margin: 2rem
+    margin: 0
+
+    background: var(--bg)
     box-shadow: 10px 10px 20px var(--shadow)
-    
-@media (max-width: 1000px)
-    body
-        margin: 0
 
 header
+    top: 0
+    left: 0
+    // width: 100%
+    padding: 20px
+    position: sticky
+
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 20px
 
     *
         color: $white
     background: var(--accent)
+    box-shadow: 10px 10px 20px var(--shadow)
 
     .brand 
         display: flex
@@ -36,7 +39,7 @@ header
             margin-right: 20px
 
         h1
-            font-size: 24px
+            font-size: 26px
             font-weight: bold
             margin: 0
 
@@ -61,7 +64,7 @@ header
             margin-right: 5px
 
 main
-    margin: 3rem
+    padding: 5rem
 
 footer
     padding: 3rem
@@ -79,24 +82,6 @@ footer
 
     section
         // margin-left: 2rem
-
-@media (max-width: 700px)
-    header
-        h1
-            display: none
-
-    footer
-        // position: absolute
-        // bottom: 1rem
-
-        text-align: center
-        display: block
-
-    body
-        box-shadow: none
-
-    html
-        background: var(--bg-light)    
 
 a
     text-decoration: none

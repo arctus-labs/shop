@@ -12,7 +12,9 @@
         "arctus/static/css/arktis.css.map": true,
         "arctus/static/css/theme.css.map": true,
         "arctus/static/css/theme.css": true,
-        "arctus/__pycache__": true
+        "arctus/__pycache__": true,
+        "arctus/static/css/responsive.css.map": true,
+        "arctus/static/css/responsive.css": true
     },
     "hide-files.files": [
         ".vscode",
@@ -21,7 +23,9 @@
         "arctus/static/css/arktis.css.map",
         "arctus/static/css/theme.css.map",
         "arctus/static/css/theme.css",
-        "arctus/__pycache__"
+        "arctus/__pycache__",
+        "arctus/static/css/responsive.css.map",
+        "arctus/static/css/responsive.css"
     ],
     "cSpell.words": [
         "arctus"
