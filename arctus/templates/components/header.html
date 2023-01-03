@@ -9,7 +9,7 @@
     <div class="links">
         {% for link in nav_links %}
             <a
-                class="{{ link.status }} {{ link.class }}"
+                class="{{ 'active' if link.title == title }} {{ link.class }}"
                 style="{{ link.css }}"
                 href="{{ link.target }}"
                 {{ ' target="_blank"' if link.is_external else '' }}
