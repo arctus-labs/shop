@@ -19,4 +19,24 @@
             </a>
         {% endfor %}
     </div>
+    
+    <div class="mobile-nav-icon" onclick="openMobileNav()">
+        <i class="bi bi-list"></i>
+    </div>
 </header>
+
+<div id="mobnav">
+    <div class="content">
+        {% for link in nav_links %}
+            <a
+                class="{{ 'active' if link.title == title }} {{ link.class }}"
+                style="{{ link.css }}"
+                href="{{ link.target }}"
+                {{ ' target="_blank"' if link.is_external else '' }}
+            >
+                <i class="bi bi-{{ link.icon }}"></i>
+                {{ link.title }}
+            </a>
+        {% endfor %}
+    </div>
+</div>

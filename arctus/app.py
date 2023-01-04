@@ -40,4 +40,8 @@ def cart():
 def contact():
     return flask.redirect('mailto:info@arctus.me')
 
+@app.route('/!m ')
+def debug_mobile():
+    return "<a href=\"javascript:window.open('/', '' ,'width=360,height=800');\">Click here (only works on Chromium-based browsers, like Chrome and Microsoft Edge!)</a>"
+
 app.run(port=1313, debug=True)

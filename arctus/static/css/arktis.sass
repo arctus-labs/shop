@@ -1,12 +1,15 @@
 @import '_vars'
 
 html
+    overflow-x: hidden
+
+    background: none
+
     *
         color: var(--fg)
         font-family: 'Inter'
         transition: 0.2s
 
-    background: none
 
 body
     margin: 0
@@ -17,18 +20,21 @@ body
 header
     top: 0
     left: 0
-    // width: 100%
+    height: auto
     padding: 20px
+    padding-inline: 4rem
     position: sticky
+    z-index: 1000
 
     display: flex
     align-items: center
     justify-content: space-between
 
-    *
-        color: $white
     background: var(--accent)
     box-shadow: 10px 10px 20px var(--shadow)
+
+    *
+        color: $white
 
     .brand 
         display: flex
@@ -63,8 +69,54 @@ header
             font-size: 18px
             margin-right: 5px
 
+    div.mobile-nav-icon
+        display: none
+        font-size: 36px
+        margin-left: 20px
+
+        cursor: pointer
+        transition: transform 0.5s
+
+        &:hover
+            transform: rotate(90deg)
+
+        &:active
+            transform: rotate(90deg) scale(0.8)
+
+#mobnav
+    top: 0
+    left: 0
+
+    z-index: 900
+    position: fixed
+
+    -webkit-backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px)
+
+    height: 0
+    width: 100%
+    overflow: hidden
+    
+    text-align: center
+
+    transition: height 0.5s
+    background: $blue-strong-translucent
+
+    div.content
+        padding-top: 10rem
+
+    .links, a, i
+        display: block
+        font-size: 40px !important
+        line-height: 2
+        color: $white
+
+        &.active
+            text-decoration: underline
+            text-decoration-thickness: 3px
+
 main
-    padding: 5rem
+    padding: 4rem
 
 footer
     padding: 3rem
@@ -81,7 +133,7 @@ footer
     grid-template-columns: auto auto auto
 
     section
-        // margin-left: 2rem
+        margin-inline: auto
 
 a
     text-decoration: none

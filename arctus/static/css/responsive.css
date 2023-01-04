@@ -1,6 +1,26 @@
+@media (min-width: 1400px) {
+  header {
+    padding-inline: 20rem;
+  }
+  main {
+    padding-inline: 20rem;
+  }
+  footer {
+    padding-inline: 20rem;
+  }
+}
 @media (max-width: 700px) {
+  main {
+    padding: 2rem;
+  }
   header h1 {
     display: none;
+  }
+  header div.links {
+    display: none;
+  }
+  header div.mobile-nav-icon {
+    display: inherit;
   }
   footer {
     text-align: center;
