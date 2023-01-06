@@ -109,6 +109,7 @@ header div.mobile-nav-icon:active {
 
 main {
   padding: 4rem;
+  padding-top: 2rem;
 }
 
 footer {
