@@ -72,11 +72,11 @@ header div.mobile-nav-icon {
   cursor: pointer;
   transition: transform 0.5s;
 }
-header div.mobile-nav-icon:hover {
-  transform: rotate(90deg);
-}
 header div.mobile-nav-icon:active {
-  transform: rotate(90deg) scale(0.8);
+  transform: scale(0.8);
+}
+header div.mobile-nav-icon.open {
+  transform: rotate(90deg);
 }
 
 #mobnav {
@@ -84,8 +84,8 @@ header div.mobile-nav-icon:active {
   left: 0;
   z-index: 900;
   position: fixed;
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   height: 0;
   width: 100%;
   overflow: hidden;

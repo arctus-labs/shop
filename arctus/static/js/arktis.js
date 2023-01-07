@@ -1,6 +1,6 @@
 window.onload = function() {
-    var htmlTag = document.getElementsByTagName('html')[0]
-    var themeTogglerIcon = document.getElementById('themeTogglerIcon');
+    const htmlTag = document.getElementsByTagName('html')[0]
+    const themeTogglerIcon = document.getElementById('themeTogglerIcon');
     
     if (getCookie('theme') == 'light') {
         htmlTag.className = 'light';

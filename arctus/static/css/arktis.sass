@@ -77,11 +77,11 @@ header
         cursor: pointer
         transition: transform 0.5s
 
-        &:hover
-            transform: rotate(90deg)
-
         &:active
-            transform: rotate(90deg) scale(0.8)
+            transform: scale(0.8)
+
+        &.open
+            transform: rotate(90deg) 
 
 #mobnav
     top: 0
@@ -90,8 +90,8 @@ header
     z-index: 900
     position: fixed
 
-    -webkit-backdrop-filter: blur(5px)
     backdrop-filter: blur(5px)
+    -webkit-backdrop-filter: blur(5px)
 
     height: 0
     width: 100%
