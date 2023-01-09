@@ -12,7 +12,7 @@ window.onload = function() {
         themeTogglerIcon.className = 'bi bi-moon';
     }
 
-    if (htmlTag.contains('dark')) {
+    if (htmlTag.classList.contains('dark')) {
         setCookie('theme', 'dark');
     } else {
         setCookie('theme', 'light');

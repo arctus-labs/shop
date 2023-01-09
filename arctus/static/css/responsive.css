@@ -4,6 +4,7 @@
   }
   header {
     height: 40px;
+    padding-inline: 2rem;
   }
   header h1 {
     display: none;
@@ -38,12 +39,12 @@
 }
 @media (min-width: 2400px) {
   header {
-    padding-inline: 35rem;
+    padding-inline: 45rem;
   }
   main {
-    padding-inline: 35rem;
+    padding-inline: 45rem;
   }
   footer {
-    padding-inline: 35rem;
+    padding-inline: 45rem;
   }
 }/*# sourceMappingURL=responsive.css.map */

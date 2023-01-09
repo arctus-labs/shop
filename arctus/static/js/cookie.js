@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
 function setCookie(name, value) {
-    document.cookie = `${name}=${value || ""}; expires=31536000; path=/; SameSite=Strict;`;
+    document.cookie = `${name}=${value || ""}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/; SameSite=Strict;`;
 }
 
 function getCookie(name) {

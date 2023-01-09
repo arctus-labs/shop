@@ -6,6 +6,21 @@
             View in... 🇺🇸🇬🇧
         </a>
     </p>
+
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="flickity.pkgd.min.js"></script>
+
+    <div class="carousel js-flickity"
+        data-flickity-options='{ "wrapAround": true, "autoPlay": 5000, "pauseAutoPlayOnHover": false }'
+    >
+        <div class="carousel-cell">
+            <img src="/static/assets/stock/building.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="/static/assets/stock/gaming-pc.jpg">
+        </div>
+    </div>
+
     <h1>Home</h1>
     <a href="/reperatur">
         <div class="cover card">
@@ -14,8 +29,20 @@
                     24/7 Reparatur Service
                     <br>
                 </span>
+                <i class="bi bi-wrench"></i>
+                <img src="/static/assets/stock/building.jpg">
+            </div>
+        </div>
+    </a>
+    <a href="/erwerb">
+        <div class="cover card">
+            <div class="gradient">
+                <span>
+                    PC Kaufen oder Mieten
+                    <br>
+                </span>
                 <i class="bi bi-pc-display"></i>
-                <img src="/static/assets/building.jpg">
+                <img src="/static/assets/stock/gaming-pc.jpg">
             </div>
         </div>
     </a>
@@ -47,13 +74,6 @@
             </div>
         </div>
     </div>
-
-    <p> Willkommen auf Arctus. Hier können Sie Ihren Computer zur Reparatur einschicken oder Computer zu
-        günstigen Angeboten erhalten.
-        Wir bieten vielfältige Zahlungsmethoden für Sie an 
-        und versprechen Ihnen eine qualitative und zuverlässige Reparatur.
-        Zudem versichern wir Ihnen eine schnelle Lieferung <b>ohne Versandkosten</b>.
-    </p>
 </main>
 
 {% include 'components/end.html' %}
