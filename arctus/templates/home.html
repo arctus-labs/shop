@@ -7,18 +7,19 @@
         </a>
     </p>
 
-    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-    <script src="flickity.pkgd.min.js"></script>
-
-    <div class="carousel js-flickity"
-        data-flickity-options='{ "wrapAround": true, "autoPlay": 5000, "pauseAutoPlayOnHover": false }'
+    </style>
+    <div class="carousel"
+        data-flickity='{
+            "wrapAround": true,
+            "autoPlay": 4000,
+            "imagesLoaded": true,
+            "percentPosition": false,
+            "pauseAutoPlayOnHover": false
+        }'
     >
-        <div class="carousel-cell">
-            <img src="/static/assets/stock/building.jpg">
-        </div>
-        <div class="carousel-cell">
-            <img src="/static/assets/stock/gaming-pc.jpg">
-        </div>
+        <img src="/static/assets/stock/building.jpg">
+        <img src="/static/assets/stock/gaming-pc.jpg">
+        <img src="/static/assets/stock/building.jpg">
     </div>
 
     <h1>Home</h1>

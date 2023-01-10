@@ -28,13 +28,13 @@
 }
 @media (min-width: 1400px) {
   header {
-    padding-inline: 20rem;
+    padding-inline: 22rem;
   }
   main {
-    padding-inline: 20rem;
+    padding-inline: 22rem;
   }
   footer {
-    padding-inline: 20rem;
+    padding-inline: 22rem;
   }
 }
 @media (min-width: 2400px) {

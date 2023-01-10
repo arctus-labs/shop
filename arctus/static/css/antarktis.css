@@ -3,7 +3,7 @@ div.card {
   height: 200px;
   position: relative;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #3185e6;
 }
 div.card * {
@@ -39,7 +39,7 @@ div.card div.gradient {
   overflow: hidden;
   display: inline-block;
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 div.card div.gradient:after {
   content: "";
@@ -49,12 +49,12 @@ div.card div.gradient:after {
   width: 100%;
   height: 100%;
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 10px;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.6745098039) 0%, rgba(0, 0, 0, 0.5764705882) 37%, rgba(255, 255, 255, 0) 100%);
   outline: 2px solid var(--bg);
 }
 div.card div.gradient img, div.card div.gradient svg {
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -80,4 +80,24 @@ div.cards {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
   margin-bottom: 3rem;
+}
+
+.carousel {
+  width: 100%;
+}
+.carousel *, .carousel {
+  border-radius: 10px;
+}
+.carousel img {
+  border-radius: 0;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.carousel button *, .carousel button {
+  color: #080808 !important;
+  background-color: #d3d9e0 !important;
 }/*# sourceMappingURL=antarktis.css.map */

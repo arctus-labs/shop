@@ -17,31 +17,23 @@ def injector():
     return dict(
         nav_links=helpers.get_config('nav'),
         socials=helpers.get_config('socials'),
-        path=flask.request.path
+        path=flask.request.path,
+        links=helpers.get_config('links').items()
     )
+
 
 @app.route('/')
 def home():
     return flask.render_template('home.html', title='Home')
 
-@app.route('/shop')
-def shop():
-    return flask.render_template('shop.html', title='Shop')
-
-@app.route('/about')
-def about():
-    return flask.render_template('about.html', title='About')
-
-@app.route('/cart')
-def cart():
-    return flask.render_template('cart.html', title='Cart')
+@app.route('/<path:subpath>')
+def page_loader(subpath):
+    pages = helpers.get_config('pages')
+    print(pages)
+    return flask.render_template(f'{subpath}.html', title=pages[subpath])
 
 @app.route('/contact')
 def contact():
     return flask.redirect('mailto:info@arctus.me')
-
-@app.route('/!m ')
-def debug_mobile():
-    return "<a href=\"javascript:window.open('/', '' ,'width=360,height=800');\">Click here (only works on Chromium-based browsers, like Chrome and Microsoft Edge!)</a>"
 
 app.run(port=1313, debug=True)

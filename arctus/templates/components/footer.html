@@ -19,12 +19,11 @@
 
     <section>
         <h3>Links</h3>
-        <a href="/">
-            Home
+        {% for path, title in links %}
+        <a href="{{ path }}">
+            {{ title }}
         </a>
         <br>
-        <a href="/contact">
-            Contact the team
-        </a>
+        {% endfor %}
     </section>
 </footer>

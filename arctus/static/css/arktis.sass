@@ -5,11 +5,12 @@ html
 
     background: none
 
+    *:not(.carousel *)
+        transition: 0.2s
+
     *
         color: var(--fg)
         font-family: 'Inter'
-        transition: 0.2s
-
 
 body
     margin: 0
@@ -151,15 +152,3 @@ mark
     color: var(--accent)
     border-radius: 5px
     background: $white
-
-.carousel-cell
-    width: 100%
-    height: 80vh
-
-
-.carousel-cell img
-    outline: 1px solid red
-    object-fit: cover
-    object-position: 50% 100%
-    /* width: 100%; */
-    /* height: 80vh; */

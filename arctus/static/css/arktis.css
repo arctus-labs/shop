@@ -2,10 +2,12 @@ html {
   overflow-x: hidden;
   background: none;
 }
+html *:not(.carousel *) {
+  transition: 0.2s;
+}
 html * {
   color: var(--fg);
   font-family: "Inter";
-  transition: 0.2s;
 }
 
 body {
@@ -144,19 +146,4 @@ mark {
   color: var(--accent);
   border-radius: 5px;
   background: #ebf0f6;
-}
-
-.carousel-cell {
-  width: 100%;
-  height: 80vh;
-}
-
-.carousel-cell img {
-  outline: 1px solid red;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 100%;
-     object-position: 50% 100%;
-  /* width: 100%; */
-  /* height: 80vh; */
 }/*# sourceMappingURL=arktis.css.map */
