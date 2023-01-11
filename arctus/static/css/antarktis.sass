@@ -90,21 +90,40 @@ div.cards
 
     margin-bottom: 3rem
 
-.carousel
+
+div.carousel
     width: 100%
+
+    ol
+        *
+            background: var(--fg) !important
 
     *, & 
         border-radius: $edge
 
-    img
-        border-radius: 0
+    div.image
+        overflow: hidden
+
         width: 100%
         height: 300px
 
-        object-fit: cover
-        object-position: center
+        img
+            border-radius: 0
+
+            width: 100%
+            height: 300px
+            object-fit: cover
+            object-position: center
+
+            transition: transform 0.3s
+            
+            &:hover
+                transform: scale(1.05)
 
     button
+        opacity: 0.5
+
         *, &
-            color: $black !important
-            background-color: $whitesmoke !important
+            border-radius: 50%
+            color: $white !important
+            background: none !important
