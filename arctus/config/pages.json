@@ -2,8 +2,10 @@
     "shop": "Shop",
     "about": "Über uns",
     "cart": "Warenkorb",
-    "repair": "Anleitung",
     
+    "service/repair": "Reparatur",
+    "service/buy": "Verkauf und Vermietung",
+
     "other/imprint": "Impressum",
     "other/privacy": "Datenschutz",
     "other/terms": "Nutzungsbedingungen",

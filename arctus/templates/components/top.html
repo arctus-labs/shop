@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
+<script src="/static/js/cookie.js"></script>
+<script>
+    const htmlTag = document.getElementsByTagName('html')[0]
+    const themeTogglerIcon = document.getElementById('themeTogglerIcon');
+    
+    if (getCookie('theme') == 'light') {
+        htmlTag.className = 'light';
+        themeTogglerIcon.className = 'bi bi-sun';
+    }
+    
+    if (getCookie('theme') == 'dark') {
+        htmlTag.className = 'dark';
+        themeTogglerIcon.className = 'bi bi-moon';
+    }
+</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,11 +39,10 @@
     {% endfor %}
 
     <!-- Scripts -->
-    {% for js in ['nav', 'cookie', 'arktis', 'flickity.pkgd.min'] %}
+    {% for js in ['nav', 'arktis', 'flickity.pkgd.min'] %}
     <script src="/static/js/{{ js }}.js"></script>
     {% endfor %}
 
     <title>{{ title }} | Arctus</title>
 </head>
-<body>
 {% include 'components/header.html' %}

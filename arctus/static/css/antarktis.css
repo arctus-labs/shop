@@ -88,9 +88,6 @@ div.carousel {
 div.carousel ol * {
   background: var(--fg) !important;
 }
-div.carousel *, div.carousel {
-  border-radius: 10px;
-}
 div.carousel div.image {
   overflow: hidden;
   width: 100%;
@@ -117,4 +114,8 @@ div.carousel button *, div.carousel button {
   border-radius: 50%;
   color: #ebf0f6 !important;
   background: none !important;
+}
+
+main div.carousel *, main div.carousel {
+  border-radius: 10px;
 }/*# sourceMappingURL=antarktis.css.map */

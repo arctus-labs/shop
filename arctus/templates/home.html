@@ -1,38 +1,28 @@
 {% include 'components/top.html' %}
 
-<main>
-    <p>
-        <!-- <a translate="no" href="https://arctus.me">
-            Back to 🇩🇪
-        </a>         -->
-        <a href="https://arctus-me.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">
-            View in 🇺🇸🇬🇧
-        </a>
-    </p>
-
-    </style>
-    <div class="carousel"
-        data-flickity='{
-            "wrapAround": true,
-            "autoPlay": 4000,
-            "imagesLoaded": true,
-            "percentPosition": false,
-            "pauseAutoPlayOnHover": false
-        }'
-    >
-        <div class="image">
-            <img src="/static/assets/stock/building.jpg">
-        </div>
-        <div class="image">
-            <img src="/static/assets/stock/gaming-pc.jpg">
-        </div>
-        <div class="image">
-            <img src="/static/assets/stock/building.jpg">
-        </div>
+<div class="carousel"
+    data-flickity='{
+        "wrapAround": true,
+        "autoPlay": 4000,
+        "imagesLoaded": true,
+        "percentPosition": false,
+        "pauseAutoPlayOnHover": false
+    }'
+>
+    <div class="image">
+        <img src="/static/assets/stock/building.jpg">
     </div>
+    <div class="image">
+        <img src="/static/assets/stock/gaming-pc.jpg">
+    </div>
+    <div class="image">
+        <img src="/static/assets/stock/building.jpg">
+    </div>
+</div>
+<main>
 
     <h1>Home</h1>
-    <a href="/reperatur">
+    <a href="/service/repair">
         <div class="cover card">
             <div class="gradient">
                 <span>
@@ -44,11 +34,11 @@
             </div>
         </div>
     </a>
-    <a href="/erwerb">
+    <a href="/service/buy">
         <div class="cover card">
             <div class="gradient">
                 <span>
-                    PC Kaufen oder Mieten
+                    PC kaufen oder mieten
                     <br>
                 </span>
                 <i translate="no" class="bi bi-pc-display"></i>
@@ -84,6 +74,10 @@
             </div>
         </div>
     </div>
+
+    <a href="https://arctus-me.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">
+        View in 🇺🇸🇬🇧
+    </a>
 </main>
 
 {% include 'components/end.html' %}
