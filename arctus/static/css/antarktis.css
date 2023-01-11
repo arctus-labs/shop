@@ -95,6 +95,7 @@ div.carousel div.image {
   overflow: hidden;
   width: 100%;
   height: 300px;
+  border-radius: 0;
 }
 div.carousel div.image img {
   border-radius: 0;
