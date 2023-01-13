@@ -9,7 +9,7 @@ html
 
     *
         color: var(--fg)
-        font-family: 'Inter'
+        font-family: 'Yu Gothic UI', -apple-system, BlinkMacSystemFont, sans-serif
 
 body
     margin: 0
@@ -20,7 +20,7 @@ header
     top: 0
     left: 0
     height: auto
-    padding: 20px
+    padding: 1rem
     padding-inline: 4rem
     position: sticky
     z-index: 1000
@@ -34,8 +34,18 @@ header
 
     *
         color: $white
+        text-decoration: none
 
-    .brand 
+    &.short
+        padding-block: 10px
+
+        .brand img
+            height: 40px
+
+        .title-group
+            opacity: 0
+
+    .brand
         display: flex
         align-items: center
 
@@ -57,12 +67,8 @@ header
             margin-left: 20px
             text-decoration: none
 
-            &:hover
-                text-shadow: 0 0 10px var(--glow)
-
             &.active
-                text-decoration: underline
-                text-decoration-thickness: 3px
+                font-weight: bold
 
         .bi
             font-size: 18px
@@ -80,7 +86,7 @@ header
             transform: scale(0.8)
 
         &.open
-            transform: rotate(90deg) 
+            transform: rotate(90deg)
 
 #mobnav
     top: 0
@@ -95,7 +101,7 @@ header
     height: 0
     width: 100%
     overflow: hidden
-    
+
     text-align: center
 
     transition: height 0.5s
@@ -109,10 +115,12 @@ header
         font-size: 40px
         line-height: 2
         color: $white
+        text-decoration: none
 
         &.active
-            text-decoration: underline
-            text-decoration-thickness: 3px
+            font-weight: bold
+            // text-decoration: underline
+            // text-decoration-thickness: 3px
 
 main
     padding: 4rem
@@ -121,11 +129,8 @@ main
 footer
     z-index: 500
 
-    width: 100%
     padding-block: 3rem
-
-    display: grid
-    grid-template-columns: auto auto auto
+    padding-inline: 4rem
 
     background: var(--bg-light)
 
@@ -135,15 +140,26 @@ footer
     i
         margin-right: .5rem
 
-    section
-        margin-inline: auto
+    justify-content: space-between
 
-a
-    text-decoration: none
+    background: var(--bg-light)
+
+    *
+        opacity: 0.8
+
+    i
+        margin-right: .5rem
+
+    display: flex
+    justify-content: space-between
+
+    div.grid-item
+        flex: 0 1 auto
+        flex-shrink: 0
 
 p, footer
     a
-        text-decoration: underline
+        text-decoration: none
 
         &:hover
             opacity: 0.7
@@ -159,15 +175,17 @@ p
     line-height: 1.5
 
 blockquote
+    width: fit-content
+
     padding: 1rem
     margin: 1rem
     margin-inline: 0
 
     opacity: 0.9
-    background: var(--bg-light)
     border-radius: $edge
+    background: $smoke
+    box-shadow: 10px 10px 50px $shadow
 
 main
-
     h3
         margin-top: 2rem

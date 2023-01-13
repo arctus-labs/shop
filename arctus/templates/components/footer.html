@@ -1,13 +1,13 @@
 <footer>
-    <section>
+    <div class="grid-item">
         <h3>arctus.me</h3>
         <p>&copy; 2022-2023 Arctus Labs</p>
         <a onclick="toggleTheme();" style="cursor: pointer">
             <i translate="no" id="themeTogglerIcon" class="bi bi-sun"></i>Toggle Theme
         </a>
-    </section>
+    </div>
 
-    <section>
+    <div class="grid-item">
         <h3>Soziale Netzwerke</h3>
         {% for social in socials %}
             <a title="Arctus at {{ social.platform }}" href="{{ social.url }}" target="_blank">
@@ -15,9 +15,9 @@
             </a>
             <br>
         {% endfor %}
-    </section>
+    </div>
 
-    <section>
+    <div class="grid-item">
         <h3>Links</h3>
         {% for path, title in links %}
         <a href="{{ path }}">
@@ -25,5 +25,5 @@
         </a>
         <br>
         {% endfor %}
-    </section>
+    </div>
 </footer>

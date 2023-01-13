@@ -27,18 +27,12 @@
   }
 }
 @media (min-width: 1400px) {
-  header {
-    padding-inline: 22rem;
-  }
-  main {
+  header, main, footer {
     padding-inline: 22rem;
   }
 }
 @media (min-width: 2400px) {
-  header {
-    padding-inline: 45rem;
-  }
-  main {
+  header, main, footer {
     padding-inline: 45rem;
   }
 }/*# sourceMappingURL=responsive.css.map */

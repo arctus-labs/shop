@@ -8,7 +8,6 @@
         "**/Thumbs.db": true,
         ".vscode": true,
         "shop/ecommerce/__pycache__": true,
-        "arctus/static/css/arktis.css": true,
         "arctus/static/css/arktis.css.map": true,
         "arctus/static/css/theme.css.map": true,
         "arctus/static/css/theme.css": true,
@@ -16,12 +15,12 @@
         "arctus/static/css/responsive.css.map": true,
         "arctus/static/css/responsive.css": true,
         "arctus/static/css/antarktis.css": true,
-        "arctus/static/css/antarktis.css.map": true
+        "arctus/static/css/antarktis.css.map": true,
+        "arctus/static/css/arktis.css": true
     },
     "hide-files.files": [
         ".vscode",
         "shop/ecommerce/__pycache__",
-        "arctus/static/css/arktis.css",
         "arctus/static/css/arktis.css.map",
         "arctus/static/css/theme.css.map",
         "arctus/static/css/theme.css",
@@ -29,7 +28,8 @@
         "arctus/static/css/responsive.css.map",
         "arctus/static/css/responsive.css",
         "arctus/static/css/antarktis.css",
-        "arctus/static/css/antarktis.css.map"
+        "arctus/static/css/antarktis.css.map",
+        "arctus/static/css/arktis.css"
     ],
     "cSpell.words": [
         "arctus"

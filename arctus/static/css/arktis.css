@@ -7,7 +7,7 @@ html *:not(.carousel *) {
 }
 html * {
   color: var(--fg);
-  font-family: "Inter";
+  font-family: "Yu Gothic UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
@@ -19,7 +19,7 @@ header {
   top: 0;
   left: 0;
   height: auto;
-  padding: 20px;
+  padding: 1rem;
   padding-inline: 4rem;
   position: -webkit-sticky;
   position: sticky;
@@ -32,6 +32,16 @@ header {
 }
 header * {
   color: #ebf0f6;
+  text-decoration: none;
+}
+header.short {
+  padding-block: 10px;
+}
+header.short .brand img {
+  height: 40px;
+}
+header.short .title-group {
+  opacity: 0;
 }
 header .brand {
   display: flex;
@@ -55,12 +65,8 @@ header .links a {
   margin-left: 20px;
   text-decoration: none;
 }
-header .links a:hover {
-  text-shadow: 0 0 10px var(--glow);
-}
 header .links a.active {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  font-weight: bold;
 }
 header .links .bi {
   font-size: 18px;
@@ -102,10 +108,10 @@ header div.mobile-nav-icon.open {
   font-size: 40px;
   line-height: 2;
   color: #ebf0f6;
+  text-decoration: none;
 }
 #mobnav .links.active, #mobnav a.active, #mobnav i.active {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  font-weight: bold;
 }
 
 main {
@@ -115,11 +121,13 @@ main {
 
 footer {
   z-index: 500;
-  width: 100%;
   padding-block: 3rem;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  padding-inline: 4rem;
   background: var(--bg-light);
+  justify-content: space-between;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: space-between;
 }
 footer * {
   opacity: 0.8;
@@ -127,16 +135,19 @@ footer * {
 footer i {
   margin-right: 0.5rem;
 }
-footer section {
-  margin-inline: auto;
+footer * {
+  opacity: 0.8;
 }
-
-a {
-  text-decoration: none;
+footer i {
+  margin-right: 0.5rem;
+}
+footer div.grid-item {
+  flex: 0 1 auto;
+  flex-shrink: 0;
 }
 
 p a, footer a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 p a:hover, footer a:hover {
   opacity: 0.7;
@@ -154,12 +165,16 @@ p {
 }
 
 blockquote {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 1rem;
   margin: 1rem;
   margin-inline: 0;
   opacity: 0.9;
-  background: var(--bg-light);
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1254901961);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2235294118);
 }
 
 main h3 {

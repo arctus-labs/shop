@@ -1,8 +1,8 @@
 function toggleTheme() {
-    if (getCookie('theme') == 'dark') {
-        setCookie('theme', 'light');
+    if (getCookie("theme") == "dark") {
+        setCookie("theme", "light");
     } else {
-        setCookie('theme', 'dark');
+        setCookie("theme", "dark");
     }
     window.location.reload();
 }
