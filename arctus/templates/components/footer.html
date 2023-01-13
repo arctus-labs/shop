@@ -1,14 +1,14 @@
 <footer>
     <section>
         <h3>arctus.me</h3>
-        <p>&copy;2022-2023 Arctus Labs</p>
+        <p>&copy; 2022-2023 Arctus Labs</p>
         <a onclick="toggleTheme();" style="cursor: pointer">
             <i translate="no" id="themeTogglerIcon" class="bi bi-sun"></i>Toggle Theme
         </a>
     </section>
 
     <section>
-        <h3>Socials</h3>
+        <h3>Soziale Netzwerke</h3>
         {% for social in socials %}
             <a title="Arctus at {{ social.platform }}" href="{{ social.url }}" target="_blank">
                 <i translate="no" class="bi bi-{{ social.icon }}"></i>{{ social.platform }} {{ social.tag }}

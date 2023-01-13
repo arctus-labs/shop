@@ -1,8 +1,23 @@
+span.hover {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+a > div.card {
+  cursor: pointer;
+}
+a > div.card:hover img {
+  filter: blur(3px);
+}
+a > div.card:hover span.hover {
+  opacity: 0.5;
+}
+
 div.card {
   width: 100%;
   height: 200px;
   position: relative;
-  cursor: pointer;
   border-radius: 10px;
   background: #3185e6;
 }
@@ -25,7 +40,7 @@ div.card.cover i {
   bottom: 1rem;
   font-size: 100px;
 }
-div.card span {
+div.card span.title {
   z-index: 200;
   position: absolute;
   left: 1rem;
@@ -35,7 +50,6 @@ div.card span {
 div.card div.gradient {
   width: 100%;
   height: 100%;
-  cursor: pointer;
   overflow: hidden;
   display: inline-block;
   position: relative;
@@ -81,6 +95,10 @@ div.cards {
   grid-gap: 2rem;
   margin-bottom: 3rem;
 }
+div.cards.centered span {
+  width: 90%;
+  text-align: center;
+}
 
 div.carousel {
   width: 100%;
@@ -118,4 +136,12 @@ div.carousel button *, div.carousel button {
 
 main div.carousel *, main div.carousel {
   border-radius: 10px;
+}
+
+.title-group {
+  position: relative;
+}
+.title-group .brand-subtitle {
+  opacity: 0.6;
+  font-size: 14px;
 }/*# sourceMappingURL=antarktis.css.map */

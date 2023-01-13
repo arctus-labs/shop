@@ -1,6 +1,6 @@
 html {
   overflow-x: hidden;
-  background: none;
+  background: var(--bg);
 }
 html *:not(.carousel *) {
   transition: all 0.2s, background 0s;
@@ -13,7 +13,6 @@ html * {
 body {
   margin: 0;
   background: var(--bg);
-  box-shadow: 10px 10px 20px var(--shadow);
 }
 
 header {
@@ -100,7 +99,7 @@ header div.mobile-nav-icon.open {
 }
 #mobnav .links, #mobnav a, #mobnav i {
   display: block;
-  font-size: 40px !important;
+  font-size: 40px;
   line-height: 2;
   color: #ebf0f6;
 }
@@ -115,10 +114,12 @@ main {
 }
 
 footer {
-  padding: 3rem;
-  background: var(--bg-light);
+  z-index: 500;
+  width: 100%;
+  padding-block: 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
+  background: var(--bg-light);
 }
 footer * {
   opacity: 0.8;
@@ -153,10 +154,14 @@ p {
 }
 
 blockquote {
-  opacity: 0.9;
+  padding: 1rem;
   margin: 1rem;
   margin-inline: 0;
-  padding: 1rem;
+  opacity: 0.9;
   background: var(--bg-light);
   border-radius: 10px;
+}
+
+main h3 {
+  margin-top: 2rem;
 }/*# sourceMappingURL=arktis.css.map */

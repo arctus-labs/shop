@@ -4,7 +4,7 @@
         "title": "Home"
     },
     {
-        "target": "/shop",
+        "target": "/shop/home",
         "title": "Shop"
     },
     {
@@ -16,7 +16,7 @@
         "title": "Kontakt"
     },
     {
-        "target": "/cart",
+        "target": "/shop/cart",
         "icon": "cart"
     }
 ]

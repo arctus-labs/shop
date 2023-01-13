@@ -1,11 +1,26 @@
 @import '_vars'
 
+span.hover
+    opacity: 0
+
+    position: absolute
+    bottom: 0
+
+a > div.card
+    cursor: pointer
+
+    &:hover
+        img
+            filter: blur(3px)
+
+        span.hover
+            opacity: 0.5
+
 div.card
     width: 100%
     height: 200px
     position: relative
 
-    cursor: pointer
     border-radius: $edge
     background: $blue-strong
 
@@ -28,7 +43,7 @@ div.card
             bottom: 1rem
             font-size: 100px
 
-    span
+    span.title
         z-index: 200
         position: absolute
         left: 1rem
@@ -40,7 +55,6 @@ div.card
         width: 100%
         height: 100%
 
-        cursor: pointer
         overflow: hidden
         display: inline-block
         position: relative
@@ -90,6 +104,10 @@ div.cards
 
     margin-bottom: 3rem
 
+    &.centered
+        span
+            width: 90%
+            text-align: center
 
 div.carousel
     width: 100%
@@ -130,3 +148,10 @@ div.carousel
 main div.carousel
     *, & 
         border-radius: $edge
+
+.title-group
+    position: relative
+
+    .brand-subtitle
+        opacity: 0.6
+        font-size: 14px

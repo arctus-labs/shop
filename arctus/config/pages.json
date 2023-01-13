@@ -1,8 +1,9 @@
 {
-    "shop": "Shop",
     "about": "Über uns",
-    "cart": "Warenkorb",
-    
+
+    "shop/home": "Shop",
+    "shop/cart": "Warenkorb",
+
     "service/repair": "Reparatur",
     "service/buy": "Verkauf und Vermietung",
 

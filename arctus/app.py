@@ -18,7 +18,7 @@ def injector():
         nav_links=helpers.get_config('nav'),
         socials=helpers.get_config('socials'),
         path=flask.request.path,
-        links=helpers.get_config('links').items(),
+        links=helpers.get_config('footer-links').items(),
         url_args=flask.request.args
     )
 
