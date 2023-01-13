@@ -1,6 +1,7 @@
 @import '_vars'
 
 html
+    scroll-behavior: smooth
     overflow-x: hidden
     background: var(--bg)
 
@@ -156,6 +157,14 @@ footer
     div.grid-item
         flex: 0 1 auto
         flex-shrink: 0
+
+        position: relative
+
+        .themeToggle
+            position: absolute
+            left: 0
+            bottom: 0
+            cursor: pointer
 
 p, footer
     a

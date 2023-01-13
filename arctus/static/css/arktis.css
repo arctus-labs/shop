@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   background: var(--bg);
 }
@@ -144,6 +145,13 @@ footer i {
 footer div.grid-item {
   flex: 0 1 auto;
   flex-shrink: 0;
+  position: relative;
+}
+footer div.grid-item .themeToggle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
 }
 
 p a, footer a {

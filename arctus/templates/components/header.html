@@ -1,5 +1,5 @@
 <header id="header">
-    <a href="/">
+    <a href="{{'javascript:window.scrollTo(0, 0);' if title == 'Home' else '/'}}">
         <div class="brand">
             <img src="/static/assets/brand/arctus-icon.png">
             <div class="title-group">
@@ -22,7 +22,7 @@
             </a>
         {% endfor %}
     </div>
-    
+
     <div class="mobile-nav-icon" onclick="openMobileNav()">
         <i translate="no" id="mobnav-icon" class="bi bi-list"></i>
     </div>
