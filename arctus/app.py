@@ -26,14 +26,25 @@ def injector():
 def home():
     return flask.render_template('home.html', title='Home')
 
+@app.errorhandler(404)
+def error_404(error):
+    return flask.render_template('error/404.html', title='404'), 404
+
 @app.route('/<path:subpath>')
 def page_loader(subpath):
     pages = helpers.get_config('pages')
-    print(pages)
+
+    if not subpath in pages:
+        return flask.abort(404)
+
     return flask.render_template(f'{subpath}.html', title=pages[subpath])
 
-@app.route('/contact')
-def contact():
+@app.route('/email')
+def email():
     return flask.redirect('mailto:info@arctus.me')
+
+@app.route('/support')
+def support():
+    return flask.redirect('/email')
 
 app.run(port=1313, debug=True)

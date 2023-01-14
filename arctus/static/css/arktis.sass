@@ -6,7 +6,7 @@ html
     background: var(--bg)
 
     *:not(.carousel *)
-        transition: all 0.2s, background 0s
+        transition: all 0.2s
 
     *
         color: var(--fg)
@@ -16,6 +16,7 @@ body
     margin: 0
 
     background: var(--bg)
+    transition: background 0s !important
 
 header
     top: 0
@@ -198,3 +199,8 @@ blockquote
 main
     h3
         margin-top: 2rem
+
+code
+    font-family: 'Fira Code', monospace
+    font-weight: 300
+    opacity: 0.5

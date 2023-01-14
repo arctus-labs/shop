@@ -1,35 +1,51 @@
-span.hover {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
+span.floating {
+  font-size: 24px;
+  z-index: 400;
+  color: #ebf0f6;
+  padding: 1rem;
+  border: 2px solid #ebf0f6;
+  border-radius: 5px;
+  transition: all 0.2s;
+  backdrop-filter: brightness(0.6);
+  -webkit-backdrop-filter: brightness(0.6);
+}
+span.floating:hover {
+  color: #080808;
+  background: #ebf0f6;
 }
 
 a > div.card {
   cursor: pointer;
 }
-a > div.card:hover img {
-  filter: blur(3px);
+a > div.card span.floating {
+  opacity: 0;
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
 }
-a > div.card:hover span.hover {
-  opacity: 0.5;
+a > div.card:hover span.floating {
+  opacity: 0.8;
 }
 
 div.card {
   width: 100%;
   height: 200px;
   position: relative;
-  border-radius: 10px;
-  background: #3185e6;
+  border-radius: 5px;
+  background: none;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2235294118);
 }
 div.card * {
   color: #ebf0f6;
 }
+div.card:hover {
+  transform: scale(1.05);
+}
 div.card.cover {
   margin-block: 3rem;
 }
-div.card.cover span {
-  font-size: 38px;
+div.card.cover span.title {
+  font-size: 32px;
   font-weight: 500;
   top: 1rem;
   left: 1rem;
@@ -54,7 +70,7 @@ div.card div.gradient {
   overflow: hidden;
   display: inline-block;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 div.card div.gradient:after {
   content: "";
@@ -64,12 +80,12 @@ div.card div.gradient:after {
   width: 100%;
   height: 100%;
   display: inline-block;
-  border-radius: 10px;
+  border-radius: 5px;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.6745098039) 0%, rgba(0, 0, 0, 0.5764705882) 37%, rgba(255, 255, 255, 0) 100%);
   outline: 2px solid var(--bg);
 }
 div.card div.gradient img, div.card div.gradient svg {
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -85,9 +101,6 @@ div.card div.gradient svg {
   position: absolute;
   top: 15%;
   outline: none;
-}
-div.card:hover img {
-  transform: scale(1.05);
 }
 
 div.cards {
@@ -123,24 +136,37 @@ div.carousel {
 div.carousel ol * {
   background: var(--fg) !important;
 }
-div.carousel div.image {
+div.carousel div.slide {
   overflow: hidden;
   width: 100%;
   height: 300px;
   border-radius: 0;
+  position: relative;
 }
-div.carousel div.image img {
+div.carousel div.slide:hover img {
+  transform: scale(1.05);
+}
+div.carousel div.slide img {
   border-radius: 0;
   width: 100%;
   height: 300px;
+  overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   transition: transform 0.3s;
 }
-div.carousel div.image img:hover {
-  transform: scale(1.05);
+div.carousel div.slide img.crop-top {
+  -o-object-position: top !important;
+     object-position: top !important;
+}
+div.carousel div.slide span.floating {
+  z-index: 2000;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
 }
 div.carousel button {
   opacity: 0.5;
@@ -152,7 +178,7 @@ div.carousel button *, div.carousel button {
 }
 
 main div.carousel *, main div.carousel {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .title-group {

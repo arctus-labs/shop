@@ -1,20 +1,37 @@
 @import '_vars'
 
-span.hover
-    opacity: 0
+span.floating
+    font-size: 24px
+    z-index: 400
 
-    position: absolute
-    bottom: 0
+    color: $white
+
+    padding: 1rem
+    border: 2px solid $white
+    border-radius: $edge
+
+    transition: all 0.2s
+
+    backdrop-filter: brightness(0.6)
+    -webkit-backdrop-filter: brightness(0.6)
+
+    &:hover
+        color: $black
+        background: $white
 
 a > div.card
     cursor: pointer
 
-    &:hover
-        img
-            filter: blur(3px)
+    span.floating
+        opacity: 0
 
-        span.hover
-            opacity: 0.5
+        left: 1rem
+        bottom: 1rem
+        position: absolute
+
+    &:hover
+        span.floating
+            opacity: 0.8
 
 div.card
     width: 100%
@@ -22,17 +39,20 @@ div.card
     position: relative
 
     border-radius: $edge
-    background: $blue-strong
+    background: none
     box-shadow: 10px 10px 50px $shadow
 
     *
         color: $white
 
+    &:hover
+        transform: scale(1.05)
+
     &.cover
         margin-block: 3rem
 
-        span
-            font-size: 38px
+        span.title
+            font-size: 32px
             font-weight: 500
             top: 1rem
             left: 1rem
@@ -59,6 +79,7 @@ div.card
         overflow: hidden
         display: inline-block
         position: relative
+
         border-radius: $edge
 
         &:after
@@ -93,10 +114,6 @@ div.card
             top: 15%
 
             outline: none
-
-    &:hover
-        img
-            transform: scale(1.05)
 
 div.cards
     display: grid
@@ -134,26 +151,40 @@ div.carousel
         *
             background: var(--fg) !important
 
-    div.image
+    div.slide
         overflow: hidden
 
         width: 100%
         height: 300px
 
         border-radius: 0
+        position: relative
+
+        &:hover
+            img
+                transform: scale(1.05)
 
         img
             border-radius: 0
 
             width: 100%
             height: 300px
+            overflow: hidden
             object-fit: cover
             object-position: center
 
             transition: transform 0.3s
 
-            &:hover
-                transform: scale(1.05)
+            &.crop-top
+                object-position: top !important
+
+        span.floating
+            z-index: 2000
+
+            position: absolute
+            left: 50%
+            bottom: 0
+            transform: translate(-50%, -50%)
 
     button
         opacity: 0.5

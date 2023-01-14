@@ -1,4 +1,4 @@
-[    
+[
     {
         "target": "/",
         "title": "Home"
@@ -12,7 +12,7 @@
         "title": "Über uns"
     },
     {
-        "target": "/contact",
+        "target": "/email",
         "title": "Kontakt"
     },
     {
