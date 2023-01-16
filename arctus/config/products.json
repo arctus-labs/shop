@@ -1,0 +1,18 @@
+[
+    {
+        "id": "catalyst-1400",
+        "title": "Catalyst 1400",
+        "price": "1.418",
+        "power": "80%",
+        "gaming": "70%",
+        "office": "60%"
+    },
+    {
+        "id": "ragnarok-800",
+        "title": "Ragnarok 800",
+        "price": "750",
+        "power": "90%",
+        "gaming": "40%",
+        "office": "40%"
+    }
+]

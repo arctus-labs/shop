@@ -2,16 +2,15 @@ span.floating {
   font-size: 24px;
   z-index: 400;
   color: #ebf0f6;
+  outline: 2px solid transparent;
   padding: 1rem;
-  border: 2px solid #ebf0f6;
   border-radius: 5px;
   transition: all 0.2s;
   backdrop-filter: brightness(0.6);
   -webkit-backdrop-filter: brightness(0.6);
 }
 span.floating:hover {
-  color: #080808;
-  background: #ebf0f6;
+  outline-color: #ebf0f6;
 }
 
 a > div.card {
@@ -118,6 +117,9 @@ div.cards.subtle .card * {
   opacity: 0.9;
   color: var(--fg);
 }
+div.cards.subtle .card:hover * {
+  opacity: 1;
+}
 div.cards.subtle .card div.gradient:after {
   background: none;
 }
@@ -165,8 +167,8 @@ div.carousel div.slide span.floating {
   z-index: 2000;
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translate(-50%, -50%);
+  bottom: 2rem;
+  transform: translate(-50%, 0);
 }
 div.carousel button {
   opacity: 0.5;

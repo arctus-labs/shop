@@ -16,7 +16,9 @@
         "arctus/static/css/responsive.css": true,
         "arctus/static/css/antarktis.css": true,
         "arctus/static/css/antarktis.css.map": true,
-        "arctus/static/css/arktis.css": true
+        "arctus/static/css/arktis.css": true,
+        "arctus/static/css/winter.css": true,
+        "arctus/static/css/winter.css.map": true
     },
     "hide-files.files": [
         ".vscode",
@@ -29,7 +31,9 @@
         "arctus/static/css/responsive.css",
         "arctus/static/css/antarktis.css",
         "arctus/static/css/antarktis.css.map",
-        "arctus/static/css/arktis.css"
+        "arctus/static/css/arktis.css",
+        "arctus/static/css/winter.css",
+        "arctus/static/css/winter.css.map"
     ],
     "cSpell.words": [
         "arctus"

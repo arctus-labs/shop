@@ -1,3 +1,5 @@
+// Custom classes, etc.
+
 @import '_vars'
 
 span.floating
@@ -6,8 +8,8 @@ span.floating
 
     color: $white
 
+    outline: 2px solid transparent
     padding: 1rem
-    border: 2px solid $white
     border-radius: $edge
 
     transition: all 0.2s
@@ -16,8 +18,9 @@ span.floating
     -webkit-backdrop-filter: brightness(0.6)
 
     &:hover
-        color: $black
-        background: $white
+        outline-color: $white
+        // color: $black
+        // background: $white
 
 a > div.card
     cursor: pointer
@@ -132,6 +135,10 @@ div.cards
                 opacity: 0.9
                 color: var(--fg)
 
+            &:hover
+                *
+                    opacity: 1
+
             div.gradient
                 &:after
                     background: none
@@ -183,8 +190,8 @@ div.carousel
 
             position: absolute
             left: 50%
-            bottom: 0
-            transform: translate(-50%, -50%)
+            bottom: 2rem
+            transform: translate(-50%, 0)
 
     button
         opacity: 0.5

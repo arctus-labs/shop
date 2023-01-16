@@ -47,4 +47,8 @@ def email():
 def support():
     return flask.redirect('/email')
 
+@app.route('/shop')
+def shop():
+    return flask.render_template('shop/home.html', title='Shop', products=helpers.get_config('products'))
+
 app.run(port=1313, debug=True)

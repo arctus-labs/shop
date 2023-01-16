@@ -1,0 +1,78 @@
+// Shop
+
+@import '_vars'
+
+@keyframes fillBar
+    from
+        width: 0%
+
+    to
+        width: 100%
+
+div.item-row
+    margin-block: 2rem
+    display: flex
+
+    div.item
+        cursor: pointer
+        border-radius: $edge
+        padding: 1rem
+        margin-right: 2rem
+
+        &:hover
+            transform: scale(1.05)
+            box-shadow: 10px 10px 50px $shadow-light
+
+        img
+            border-radius: $edge
+
+            display: block
+            width: 400px
+            height: 200px
+            object-fit: cover
+            object-position: center
+
+        div.content
+            padding-block: 1rem
+            position: relative
+
+            span.title
+                display: block
+                font-size: 24px
+
+            div.bars
+                margin-block: 1rem
+
+                .bar-title
+
+                .bar-percentage
+                    float: right
+                    font-weight: bold
+
+                div.bar
+                    height: 20px
+                    width: 100%
+                    overflow: hidden
+
+                    margin-top: 5px
+                    margin-bottom: 1rem
+
+                    border-radius: 7px
+                    background: $bg-light
+
+                    div.bar-fill
+                        width: 100%
+                        height: 100%
+
+                        div
+                            height: 100%
+                            animation: fillBar 1s ease-in-out
+                            background: $blue-strong
+
+            span.price
+                position: absolute
+                top: 1rem
+                right: 0
+
+                font-size: 24px
+                font-weight: 200

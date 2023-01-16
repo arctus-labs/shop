@@ -19,6 +19,9 @@
     text-align: center;
     display: block;
   }
+  footer .theme-toggle {
+    position: static !important;
+  }
   body {
     box-shadow: none;
   }

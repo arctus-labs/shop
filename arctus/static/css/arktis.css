@@ -125,20 +125,15 @@ footer {
   z-index: 500;
   padding-block: 3rem;
   padding-inline: 4rem;
-  background: var(--bg-light);
-  justify-content: space-between;
-  background: var(--bg-light);
+  background: rgba(0, 0, 0, 0.0941176471);
   display: flex;
   justify-content: space-between;
 }
 footer * {
   opacity: 0.8;
 }
-footer i {
-  margin-right: 0.5rem;
-}
-footer * {
-  opacity: 0.8;
+footer p, footer a {
+  font-weight: 300;
 }
 footer i {
   margin-right: 0.5rem;
@@ -148,7 +143,7 @@ footer div.grid-item {
   flex-shrink: 0;
   position: relative;
 }
-footer div.grid-item .themeToggle {
+footer div.grid-item .theme-toggle {
   position: absolute;
   left: 0;
   bottom: 0;
