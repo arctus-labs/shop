@@ -16,7 +16,8 @@
 }
 div.item-row {
   margin-block: 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 div.item-row div.item {
   cursor: pointer;
@@ -31,12 +32,13 @@ div.item-row div.item:hover {
 div.item-row div.item img {
   border-radius: 5px;
   display: block;
-  width: 400px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 350px;
+  height: 300px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   -o-object-position: center;
      object-position: center;
+  transform: scale(0.9);
 }
 div.item-row div.item div.content {
   padding-block: 1rem;
@@ -47,7 +49,31 @@ div.item-row div.item div.content span.title {
   font-size: 24px;
 }
 div.item-row div.item div.content div.bars {
+  position: relative;
   margin-block: 1rem;
+}
+div.item-row div.item div.content div.bars div.hover-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 18px;
+}
+div.item-row div.item div.content div.bars div.hover-info span {
+  display: block;
+  margin-block: 5px;
+}
+div.item-row div.item div.content div.bars div.hover-info ul {
+  margin-block: 0;
+  padding-left: 1.5rem;
+}
+div.item-row div.item div.content div.bars:hover * {
+  background: var(--bg);
+}
+div.item-row div.item div.content div.bars:hover div.hover-info {
+  opacity: 1;
 }
 div.item-row div.item div.content div.bars .bar-percentage {
   float: right;
@@ -60,7 +86,7 @@ div.item-row div.item div.content div.bars div.bar {
   margin-top: 5px;
   margin-bottom: 1rem;
   border-radius: 7px;
-  background: rgba(0, 0, 0, 0.0941176471);
+  background: var(--alt);
 }
 div.item-row div.item div.content div.bars div.bar div.bar-fill {
   width: 100%;
@@ -76,6 +102,32 @@ div.item-row div.item div.content span.price {
   position: absolute;
   top: 1rem;
   right: 0;
-  font-size: 24px;
-  font-weight: 200;
+  font-size: 28px;
+  color: #3185e6;
+}
+
+.special-glow {
+  color: #3185e6;
+}
+
+@-webkit-keyframes rgbRainbow {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rgbRainbow {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+.rgb {
+  -webkit-animation: rgbRainbow 10s infinite linear;
+          animation: rgbRainbow 10s infinite linear;
 }/*# sourceMappingURL=winter.css.map */

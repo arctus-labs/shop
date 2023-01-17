@@ -1,0 +1,86 @@
+{% include 'components/top.html' %}
+
+<main>
+    <h1>Shop</h1>
+    <p>
+        Tippen oder fahren Sie mit der Maus über die blauen Balken,
+        um genauere Angaben zum jeweiligen PC zu erhalten.
+    </p>
+
+    <form action="" method="get">
+        <select name="sort" id="sort" onchange="this.form.submit()">
+            <option value="price">Preis</option>
+            <option value="power">Stromsparsamkeit</option>
+            <option value="gaming">Videospiele und 3D-Rendering</option>
+            <option value="office">Office-Anwendungen</option>
+        </select>
+    </form>
+
+    <div class="item-row">
+        {% for product in products %}
+        <div class="item">
+            <!-- <img src="/static/assets/products/{{ product.id }}.jpg"> -->
+            <img class="rgb" src="https://static.digitecgalaxus.ch/Files/6/3/5/6/1/6/7/6/ImageServer.jpeg">
+            <div class="content">
+                <span class="title">{{ product.title }}</span>
+                <span class="price">{{ product.price }} €</span>
+                <div class="bars">
+                    <div class="hover-info">
+                        <span>
+                            <i class="bi bi-gpu-card"></i>
+                            {{ product.gpu or '?' }}
+                        </span>
+                        <span>
+                            <i class="bi bi-cpu"></i>
+                            {{ product.cpu or '?' }}
+                        </span>
+                        <span>
+                            <i class="bi bi-memory"></i>
+                            {{ product.ram or '?' }}
+                        </span>
+                        <span>
+                            <i class="bi bi-device-ssd"></i>
+                            {{ product.storage or '?' }}
+                        </span>
+                        <span>
+                            <i class="bi bi-outlet"></i>
+                            {{ product.psu or '?' }}
+                        </span>
+                        <span>
+                            <i class="bi bi-motherboard"></i>
+                            {{ product.motherboard or '?' }}
+                        </span>
+                        <span class="special-glow">
+                            <i class="bi bi-patch-check-fill"></i>
+                            {{ product.guarantee or '?' }} Monate Garantie
+                        </span>
+                    </div>
+                    <span class="bar-title">Speicherkapazität</span>
+                    <span class="bar-percentage">{{ product.percentage.storage }}%</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width: {{ product.percentage.storage }}%">
+                            <div></div>
+                        </div>
+                    </div>
+                    <span class="bar-title">Videospiele und 3D-Grafik</span>
+                    <span class="bar-percentage">{{ product.percentage.gpu }}%</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width: {{ product.percentage.gpu }}%">
+                            <div></div>
+                        </div>
+                    </div>
+                    <span class="bar-title">Office-Anwendungen</span>
+                    <span class="bar-percentage">{{ product.percentage.cpu }}%</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width: {{ product.percentage.cpu }}%">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'components/end.html' %}

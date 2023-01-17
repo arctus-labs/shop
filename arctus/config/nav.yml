@@ -1,0 +1,14 @@
+-   target: /
+    title: Home
+
+-   target: /shop
+    title: Shop
+
+-   target: /about
+    title: Über uns
+
+-   target: /email
+    title: Kontakt
+
+-   target: /shop/cart
+    icon: cart

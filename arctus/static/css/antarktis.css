@@ -1,7 +1,10 @@
-span.floating {
-  font-size: 24px;
+.floating {
+  font-size: 18px;
   z-index: 400;
   color: #ebf0f6;
+}
+.floating.button {
+  font-size: 24px;
   outline: 2px solid transparent;
   padding: 1rem;
   border-radius: 5px;
@@ -9,26 +12,24 @@ span.floating {
   backdrop-filter: brightness(0.6);
   -webkit-backdrop-filter: brightness(0.6);
 }
-span.floating:hover {
+.floating.button:hover {
   outline-color: #ebf0f6;
 }
 
-a > div.card {
+div.card {
   cursor: pointer;
 }
-a > div.card span.floating {
+div.card span.floating {
   opacity: 0;
   left: 1rem;
   bottom: 1rem;
   position: absolute;
 }
-a > div.card:hover span.floating {
+div.card:hover span.floating {
   opacity: 0.8;
 }
 
 div.card {
-  width: 100%;
-  height: 200px;
   position: relative;
   border-radius: 5px;
   background: none;
@@ -37,7 +38,11 @@ div.card {
 div.card * {
   color: #ebf0f6;
 }
-div.card:hover {
+div.card.huge {
+  width: 100%;
+  height: 200px;
+}
+div.card.huge:hover {
   transform: scale(1.05);
 }
 div.card.cover {

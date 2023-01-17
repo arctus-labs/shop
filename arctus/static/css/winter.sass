@@ -11,7 +11,8 @@
 
 div.item-row
     margin-block: 2rem
-    display: flex
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
 
     div.item
         cursor: pointer
@@ -27,10 +28,12 @@ div.item-row
             border-radius: $edge
 
             display: block
-            width: 400px
-            height: 200px
-            object-fit: cover
+            width: 350px
+            height: 300px
+            object-fit: scale-down
             object-position: center
+
+            transform: scale(0.9)
 
         div.content
             padding-block: 1rem
@@ -41,9 +44,33 @@ div.item-row
                 font-size: 24px
 
             div.bars
+                position: relative
                 margin-block: 1rem
 
-                .bar-title
+                div.hover-info
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+
+                    opacity: 0
+                    font-size: 18px
+
+                    span
+                        display: block
+                        margin-block: 5px
+
+                    ul
+                        margin-block: 0
+                        padding-left: 1.5rem
+
+                &:hover
+                    *
+                        background: var(--bg)
+
+                    div.hover-info
+                        opacity: 1
 
                 .bar-percentage
                     float: right
@@ -58,7 +85,7 @@ div.item-row
                     margin-bottom: 1rem
 
                     border-radius: 7px
-                    background: $bg-light
+                    background: var(--alt)
 
                     div.bar-fill
                         width: 100%
@@ -74,5 +101,17 @@ div.item-row
                 top: 1rem
                 right: 0
 
-                font-size: 24px
-                font-weight: 200
+                font-size: 28px
+                color: $blue-strong
+
+.special-glow
+    color: $blue-strong
+
+@keyframes rgbRainbow
+    from
+        filter: hue-rotate(0deg)
+    to
+        filter: hue-rotate(360deg)
+
+.rgb
+    animation: rgbRainbow 10s infinite linear

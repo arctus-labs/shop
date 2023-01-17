@@ -134,7 +134,7 @@ footer
     padding-block: 3rem
     padding-inline: 4rem
 
-    background: $bg-light
+    background: var(--alt)
 
     *
         opacity: 0.8
@@ -197,3 +197,20 @@ code
     font-family: 'Fira Code', monospace
     font-weight: 300
     opacity: 0.5
+
+select
+    border: none
+    border-radius: $edge
+    padding: 0.5rem
+    margin: 0.5rem
+    margin-inline: 0
+
+    color: var(--fg)
+    background: var(--bg-ish)
+
+    &:focus
+        outline: none
+
+    option
+        color: var(--fg)
+        background: var(--bg-ish)

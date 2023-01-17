@@ -1,0 +1,33 @@
+-   id: max-dummy
+    name: -HIDDEN- Maximal Configuration Dummy
+    price: 99999
+    guarantee: 120
+
+    gpu: NVIDIA GeForce RTX 4090
+    cpu: AMD Ryzen 9 7950X
+    ram: 4x16=64GB SSD G.Skill Trident Z5 RGB, DDR5-8000
+    storage: 4TB SSD Samsung 970 EVO Plus
+    motherboard: MSI MEG X670E Godlike
+    psu: 1600W ASUS ROG Thor Titanium
+
+    stats:
+        storage: 4000
+        gpu: 39272
+        cpu: 63437
+
+-   id: catalyst-pro
+    name: Catalyst Pro
+    price: 1418
+    guarantee: 24
+
+    gpu: XFX Speedster QICK 319 Radeon RX 6750 XT Ultra Gaming
+    cpu: AMD Ryzen 5 5600X
+    ram: 4x8=32 GB Corsair DDR4-3200
+    storage: 1TB MSI Spatium M390
+    motherboard: GIGABYTE Gaming XV2 AM4 B550
+    psu: 600W be quiet! Pure Power 11
+
+    stats:
+        storage: 1000
+        gpu: 21451
+        cpu: 21936

@@ -125,7 +125,7 @@ footer {
   z-index: 500;
   padding-block: 3rem;
   padding-inline: 4rem;
-  background: rgba(0, 0, 0, 0.0941176471);
+  background: var(--alt);
   display: flex;
   justify-content: space-between;
 }
@@ -189,4 +189,21 @@ code {
   font-family: "Fira Code", monospace;
   font-weight: 300;
   opacity: 0.5;
+}
+
+select {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-inline: 0;
+  color: var(--fg);
+  background: var(--bg-ish);
+}
+select:focus {
+  outline: none;
+}
+select option {
+  color: var(--fg);
+  background: var(--bg-ish);
 }/*# sourceMappingURL=arktis.css.map */
