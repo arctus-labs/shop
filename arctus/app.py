@@ -1,5 +1,6 @@
 import flask
 
+import pcs
 import flarc
 import helpers
 
@@ -49,27 +50,7 @@ def support():
 @app.route('/shop')
 def shop():
     """Shop page."""
-    products = helpers.get_config('products')
-
-    max_pc = products[0]
-    max_storage = max_pc['stats']['storage']
-    max_gpu = max_pc['stats']['gpu']
-    max_cpu = max_pc['stats']['cpu']
-
-    sort_key = flask.request.args.get('sort', 'price')
-    products = sorted(products, key=lambda products: products[sort_key])
-
-    for product in products:
-        product['percentage'] = {}
-        stats = product['stats']
-
-        product['percentage']['storage'] = round(stats['storage'] / max_storage * 100)
-        product['percentage']['gpu'] = round(stats['gpu'] / max_gpu * 100)
-        product['percentage']['cpu'] = round(stats['cpu'] / max_cpu * 100)
-
-        if product['name'].startswith('-HIDDEN- '):
-            products.remove(product)
-
+    products = pcs.list_all(sort_by=flask.request.args.get('sort', 'price'))
     return flask.render_template('shop/shop.html', title='Shop', products=products)
 
 app.run(port=1313, debug=True)

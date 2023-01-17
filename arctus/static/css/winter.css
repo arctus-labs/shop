@@ -100,7 +100,7 @@ div.item-row div.item div.content div.bars div.bar div.bar-fill div {
 }
 div.item-row div.item div.content span.price {
   position: absolute;
-  top: 1rem;
+  top: -1rem;
   right: 0;
   font-size: 28px;
   color: #3185e6;
@@ -128,6 +128,6 @@ div.item-row div.item div.content span.price {
   }
 }
 .rgb {
-  -webkit-animation: rgbRainbow 10s infinite linear;
-          animation: rgbRainbow 10s infinite linear;
+  -webkit-animation: rgbRainbow 15s infinite linear;
+          animation: rgbRainbow 15s infinite linear;
 }/*# sourceMappingURL=winter.css.map */

@@ -1,7 +1,7 @@
 -   id: max-dummy
     name: -HIDDEN- Maximal Configuration Dummy
     price: 99999
-    guarantee: 120
+    guarantee: 420
 
     gpu: NVIDIA GeForce RTX 4090
     cpu: AMD Ryzen 9 7950X
