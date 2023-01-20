@@ -1,0 +1,18 @@
+{% for link in nav_links %}
+<a
+    class="{{ 'active' if link.title == title }} {{ link.class }}"
+    style="{{ link.css }}"
+    href="{{ link.target }}"
+    {{ ' target="_blank"' if link.is_external else '' }}
+>
+    <i class="bi bi-{{ link.icon }}"></i>
+    {{ link.title }}
+</a>
+{% endfor %}
+<a
+class="{{ 'active' if title == 'Account' }}"
+href="/account"
+>
+<i class="bi bi-person"></i>
+Welcome, <b>{{ user.name or 'please log in' }}</b>
+</a>

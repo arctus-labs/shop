@@ -9,4 +9,4 @@ accounts = flask.Blueprint('accounts', __name__)
 def account_home():
     """Arctus home page."""
 
-    return flask.render_template('home.html', title='Home')
+    return flask.render_template('accounts/templates/create.html', title='Home')

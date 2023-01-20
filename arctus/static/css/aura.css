@@ -1,0 +1,48 @@
+div.entry {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 5px;
+  background: var(--alt);
+  text-align: center;
+}
+div.entry h1 {
+  margin-block: 0;
+  margin-bottom: 3rem;
+}
+div.entry div.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: left;
+}
+
+span.label {
+  margin-block: 0.5rem;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 20px;
+  color: var(--fg);
+  border: none;
+  background: rgba(255, 255, 255, 0.3647058824);
+  border-radius: 5px;
+  outline: 5px solid transparent;
+}
+input:focus {
+  outline-color: rgba(255, 255, 255, 0.1254901961);
+}
+
+input[type=checkbox] {
+  width: auto;
+  margin-block: 1rem;
+  transform: scale(1.4);
+  cursor: pointer;
+}
+input[type=checkbox]:focus {
+  outline: none;
+}/*# sourceMappingURL=aura.css.map */

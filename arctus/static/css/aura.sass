@@ -1,0 +1,52 @@
+// Login system etc.
+
+@import '_vars'
+
+div.entry
+    margin-left: auto
+    margin-right: auto
+
+    width: 50%
+    padding: 2rem
+    border-radius: $edge
+
+    background: var(--alt)
+    text-align: center
+
+    h1
+        margin-block: 0
+        margin-bottom: 3rem
+
+    div.content
+        margin-left: auto
+        margin-right: auto
+
+        width: 70%
+        text-align: left
+
+span.label
+    margin-block: 0.5rem
+    display: block
+
+input
+    width: 100%
+    padding: 0.5rem
+    font-size: 20px
+    color: var(--fg)
+    border: none
+    background: $glow
+    border-radius: $edge
+    outline: 5px solid transparent
+
+    &:focus
+        outline-color: $smoke
+
+input[type=checkbox]
+    width: auto
+    margin-block: 1rem
+    transform: scale(1.4)
+
+    cursor: pointer
+
+    &:focus
+        outline: none

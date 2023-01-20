@@ -3,7 +3,7 @@
         <h3>arctus.me</h3>
         <p>&copy; 2022-2023 Arctus Labs GbR</p>
         <a onclick="toggleTheme();" class="theme-toggle">
-            <i translate="no" id="themeTogglerIcon" class="bi bi-sun"></i>Farbschema wechseln
+            <i id="themeTogglerIcon" class="bi bi-sun"></i>Farbschema wechseln
         </a>
     </div>
 
@@ -11,7 +11,7 @@
         <h3>Soziale Netzwerke</h3>
         {% for social in socials %}
             <a title="Arctus at {{ social.platform }}" href="{{ social.url }}" target="_blank">
-                <i translate="no" class="bi bi-{{ social.icon }}"></i>{{ social.platform }} {{ social.tag }}
+                <i class="bi bi-{{ social.icon }}"></i>{{ social.platform }} {{ social.tag }}
             </a>
             <br>
         {% endfor %}

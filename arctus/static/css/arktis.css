@@ -7,6 +7,7 @@ html *:not(.carousel *) {
   transition: all 0.2s;
 }
 html * {
+  box-sizing: border-box;
   color: var(--fg);
   font-family: "Yu Gothic UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }

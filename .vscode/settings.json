@@ -22,7 +22,9 @@
         "arctus/static/css/snow.css.map": true,
         "arctus/static/css/snow.css": true,
         "arctus/noctus/__pycache__": true,
-        "arctus/accounts/__pycache__": true
+        "arctus/accounts/__pycache__": true,
+        "arctus/static/css/aura.css": true,
+        "arctus/static/css/aura.css.map": true
     },
     "hide-files.files": [
         ".vscode",
@@ -41,7 +43,9 @@
         "arctus/static/css/snow.css.map",
         "arctus/static/css/snow.css",
         "arctus/noctus/__pycache__",
-        "arctus/accounts/__pycache__"
+        "arctus/accounts/__pycache__",
+        "arctus/static/css/aura.css",
+        "arctus/static/css/aura.css.map"
     ],
     "cSpell.words": [
         "arctus",

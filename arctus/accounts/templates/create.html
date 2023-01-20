@@ -1,0 +1,26 @@
+{% include 'components/top.html' %}
+
+<main>
+
+    <div class="entry">
+        <h1>Create an Arctus account</h1>
+
+        <div class="content">
+            <span class="label">E-Mail</span>
+            <input type="email" placeholder="your@email.here" required>
+
+            <span class="label">Password</span>
+            <input type="password" placeholder="⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤" required>
+
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I have read agree to the <a href="/terms" target="_blank">
+                Terms of Service</a> and
+                <a href="/privacy"  target="_blank">Privacy Policy</a>.
+            </label>
+
+            <button>Create</button>
+        </div>
+    </div>
+</main>
+
+{% include 'components/end.html' %}

@@ -106,8 +106,7 @@ div.product-view {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 div.product-view div.left {
-  height: auto;
-  width: 500px;
+  width: 100%;
 }
 div.product-view div.left div.zoom-container {
   z-index: 1000 !important;
@@ -124,7 +123,7 @@ div.product-view div.left div.zoom-container img {
       -ms-user-select: none;
           user-select: none;
   width: 100%;
-  height: 100%;
+  height: 500px;
   transition: all 0s !important;
 }
 div.product-view div.right {

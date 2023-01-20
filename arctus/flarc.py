@@ -39,7 +39,8 @@ class Flarc(flask.Flask):
                 socials=helpers.get_config('socials'),
                 path=flask.request.path,
                 links=helpers.get_config('footer-links').items(),
-                url_args=flask.request.args
+                url_args=flask.request.args,
+                user=flask.session.get('user', None),
         )
 
         @self.errorhandler(400)
