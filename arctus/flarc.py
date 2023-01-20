@@ -1,13 +1,18 @@
+"""Module managing the custom Flask application ("Flarc")."""
+
 import os
 import flask
 import logging
 
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+from . import helpers
+
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.WARN)
 
 class Flarc(flask.Flask):
+    """Custom Flask application."""
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -24,3 +29,27 @@ class Flarc(flask.Flask):
             "DEBUG": True,
             "CACHE_DEFAULT_TIMEOUT": 300
         })
+
+
+        @self.context_processor
+        def injector():
+            """Variables that are injected in all templates."""
+            return dict(
+                nav_links=helpers.get_config('nav'),
+                socials=helpers.get_config('socials'),
+                path=flask.request.path,
+                links=helpers.get_config('footer-links').items(),
+                url_args=flask.request.args
+        )
+
+        @self.errorhandler(400)
+        def error_400(error):
+            """400 error page."""
+
+            return flask.render_template('error/400.html', title='400', message=error), 400
+
+        @self.errorhandler(404)
+        def error_404(*args, **kwargs):
+            """404 error page."""
+
+            return flask.render_template('error/404.html', title='404'), 404

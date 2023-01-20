@@ -1,4 +1,4 @@
 while true; do
-    python arctus/app.py
+    python run_arctus.py
     sleep 3;
 done

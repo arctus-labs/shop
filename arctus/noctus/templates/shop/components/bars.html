@@ -1,0 +1,21 @@
+<span class="bar-title">Speicherkapazität</span>
+<span class="bar-percentage">{{ product.percentage.storage }}%</span>
+<div class="bar">
+    <div class="bar-fill" style="width: {{ product.percentage.storage }}%">
+        <div></div>
+    </div>
+</div>
+<span class="bar-title">Videospiele und 3D-Grafik</span>
+<span class="bar-percentage">{{ product.percentage.gpu }}%</span>
+<div class="bar">
+    <div class="bar-fill" style="width: {{ product.percentage.gpu }}%">
+        <div></div>
+    </div>
+</div>
+<span class="bar-title">Office-Anwendungen</span>
+<span class="bar-percentage">{{ product.percentage.cpu }}%</span>
+<div class="bar">
+    <div class="bar-fill" style="width: {{ product.percentage.cpu }}%">
+        <div></div>
+    </div>
+</div>

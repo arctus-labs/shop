@@ -1,0 +1,49 @@
+{% include 'components/top.html' %}
+
+<main>
+    <h1>Shop</h1>
+    <p>
+        Tippen oder fahren Sie mit der Maus über die blauen Balken,
+        um genauere Angaben zum jeweiligen PC zu erhalten.
+    </p>
+
+    <h2>Filter</h2>
+    <form action="" method="get">
+        <select name="sort" onchange="this.form.submit()">
+            {% for sort_option in sort_options %}
+            <option value="{{ sort_option.key }}" {{ 'selected' if sort_option.is_selected else '' }}>{{ sort_option.title }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="checkbox" name="invert_sort" value="1" onchange="this.form.submit()" {{ 'checked' if invert_sort else '' }}>
+        <label for="invert_sort">Sortierung umkehren</label><br>
+    </form>
+
+
+    <div class="item-row">
+        {% for product in products %}
+        <a ghost href="/shop/product/{{ product.id }}">
+            <div class="item">
+                <!-- <img src="/static/assets/products/{{ product.id }}.jpg"> -->
+                <img class="" src="https://static.digitecgalaxus.ch/Files/6/3/5/6/1/6/7/6/ImageServer.jpeg">
+                <div class="content">
+                    <span class="product-title">{{ product.name }}</span>
+                    <span class="price">
+                        <span class="itself">
+                            {{ product.price }} €
+                        </span>
+                    </span>
+                    <div class="bars">
+                        {% include 'noctus/templates/shop/components/bars.html' %}
+                        <div class="hover-info">
+                            {% include 'noctus/templates/shop/components/product-infos.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'components/end.html' %}

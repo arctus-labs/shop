@@ -1,0 +1,23 @@
+{% include 'components/top.html' %}
+
+<main>
+    <h2>400 - Fehlerhafte Anfrage</h2>
+    <p>
+        Ein Fehler ist aufgetreten.
+        Die von Ihnen gewünschte Internetadresse konnte von Arctus nicht aufgerufen werden.
+        <br>
+        <b>Fehlermeldung:</b> <code>{{ error or 'Bad Request' }}</code>
+    </p>
+    <h3>Dies kann folgende Gründe haben:</h3>
+    <ul>
+        <li>Wir haben den Programmcode geändert und dieser Link funktioniert nun anders oder gar nicht mehr.</li>
+        <li>Sie haben einen fehlerhaften oder veralteten Link angeklickt.</li>
+    </ul>
+    <h3>Was Sie tun können:</h3>
+    <ul>
+        <li>Kehren Sie zur <a href="#" onclick="window.history.go(-1)">vorherigen Seite</a> zurück und prüfen Sie ihre Eingaben.</li>
+        <li>Notfalls können Sie sich aber natürlich auch an <a href="/support">das Team</a> wenden.</li>
+    </ul>
+</main>
+
+{% include 'components/end.html' %}

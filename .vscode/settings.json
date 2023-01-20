@@ -18,7 +18,11 @@
         "arctus/static/css/antarktis.css.map": true,
         "arctus/static/css/arktis.css": true,
         "arctus/static/css/winter.css": true,
-        "arctus/static/css/winter.css.map": true
+        "arctus/static/css/winter.css.map": true,
+        "arctus/static/css/snow.css.map": true,
+        "arctus/static/css/snow.css": true,
+        "arctus/noctus/__pycache__": true,
+        "arctus/accounts/__pycache__": true
     },
     "hide-files.files": [
         ".vscode",
@@ -33,11 +37,21 @@
         "arctus/static/css/antarktis.css.map",
         "arctus/static/css/arktis.css",
         "arctus/static/css/winter.css",
-        "arctus/static/css/winter.css.map"
+        "arctus/static/css/winter.css.map",
+        "arctus/static/css/snow.css.map",
+        "arctus/static/css/snow.css",
+        "arctus/noctus/__pycache__",
+        "arctus/accounts/__pycache__"
     ],
     "cSpell.words": [
         "arctus",
+        "ASUS",
         "errorhandler",
-        "Flarc"
+        "flarc",
+        "Flarc",
+        "QICK",
+        "Radeon",
+        "Ryzen",
+        "Spatium"
     ]
 }

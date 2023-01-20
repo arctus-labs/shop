@@ -1,3 +1,5 @@
+// Default base tags
+
 @import '_vars'
 
 html
@@ -67,7 +69,6 @@ header
         a
             font-size: 18px
             margin-left: 20px
-            text-decoration: none
 
             &.active
                 font-weight: bold
@@ -107,7 +108,7 @@ header
     text-align: center
 
     transition: height 0.5s
-    background: $blue-strong-translucent
+    background: $accent-strong-translucent
 
     div.content
         padding-top: 10rem
@@ -121,8 +122,6 @@ header
 
         &.active
             font-weight: bold
-            // text-decoration: underline
-            // text-decoration-thickness: 3px
 
 main
     padding: 4rem
@@ -159,6 +158,9 @@ footer
             left: 0
             bottom: 0
             cursor: pointer
+
+a[ghost]
+    text-decoration: none
 
 p, footer
     a

@@ -28,6 +28,20 @@
   html {
     background: var(--alt);
   }
+  div.product-view {
+    width: 100%;
+    display: block !important;
+  }
+  div.product-view div.left {
+    width: 100% !important;
+  }
+  div.product-view div.left img {
+    height: 50vh !important;
+  }
+  div.product-view div.right {
+    margin-left: 0 !important;
+    margin-top: 2rem;
+  }
 }
 @media (min-width: 1400px) {
   header, main, footer {

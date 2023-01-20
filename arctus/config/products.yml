@@ -31,3 +31,54 @@
         storage: 1000
         gpu: 21451
         cpu: 21936
+
+-   id: ragnarok-lite
+    name: Ragnarok Lite
+    price: 815
+    guarantee: 24
+
+    gpu: NVIDIA GeForce RTX 3060 Ti
+    cpu: AMD Ryzen 5 5600X
+    ram: 4x8=32 GB Corsair DDR4-3200
+    storage: 1TB MSI Spatium M390
+    motherboard: GIGABYTE Gaming XV2 AM4 B550
+    psu: 600W be quiet! Pure Power 11
+
+    stats:
+        storage: 1000
+        gpu: 14858
+        cpu: 21936
+
+-   id: halothan-pro
+    name: Halothan Pro
+    price: 1050
+    guarantee: 24
+
+    gpu: NVIDIA GeForce RTX 3070
+    cpu: AMD Ryzen 5 5600X
+    ram: 4x8=32 GB Corsair DDR4-3200
+    storage: 1TB MSI Spatium M390
+    motherboard: GIGABYTE Gaming XV2 AM4 B550
+    psu: 600W be quiet! Pure Power 11
+
+    stats:
+        storage: 1000
+        gpu: 17566
+        cpu: 21936
+
+-   id: scorpion-power
+    name: Scorpion Power
+    price: 1250
+    guarantee: 24
+
+    gpu: NVIDIA GeForce RTX 3080
+    cpu: AMD Ryzen 5 5600X
+    ram: 4x8=32 GB Corsair DDR4-3200
+    storage: 1TB MSI Spatium M390
+    motherboard: GIGABYTE Gaming XV2 AM4 B550
+    psu: 600W be quiet! Pure Power 11
+
+    stats:
+        storage: 1000
+        gpu: 20275
+        cpu: 21936

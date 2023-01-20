@@ -1,0 +1,53 @@
+{% include 'components/top.html' %}
+
+<input type="hidden" id="product-id" value="{{ product.id }}">
+
+<a href="javascript:window.history.back();">
+    <span class="fab back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+    </span>
+</a>
+<main>
+
+    <div class="product-view">
+        <div class="left">
+            <div class="zoom-container">
+                <!-- <img src="/static/assets/products/{{ product.id }}.jpg"> -->
+                <img draggable="false" id="zoomjs" class="" src="https://static.digitecgalaxus.ch/Files/6/3/5/6/1/6/7/6/ImageServer.jpeg">
+            </div>
+        </div>
+        <div class="right">
+            <span class="product-title">{{ product.name }}</span>
+            <span class="price">
+                <span class="itself">
+                    {{ product.price }} €
+                </span>
+                <br><br>
+                <span class="disclaimer">
+                    inkl. Lieferkosten
+                </span>
+            </span>
+            {% include 'noctus/templates/shop/components/product-infos.html' %}
+            <span class="special-glow">
+                <i class="bi bi-patch-check-fill"></i>
+                {{ product.guarantee or '?' }} Monate Garantie
+            </span>
+            <div class="dual">
+                <button class="first" onclick="buyNow();">
+                    Jetzt kaufen
+                </button>
+                <button class="second" onclick="addToCard();">
+                    In den Warenkorb
+                </button>
+            </div>
+            <div class="bars">
+                {% include 'noctus/templates/shop/components/bars.html' %}
+            </div>
+        </div>
+</main>
+
+{% include 'components/end.html' %}
+<script src="/static/js/zoom.js"></script>
+<script src="/static/js/shop.js"></script>
