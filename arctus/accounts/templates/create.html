@@ -1,26 +1,76 @@
 {% include 'components/top.html' %}
-
 <main>
+    <form action="" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <div class="entry">
+            <h1>Create an Arctus account</h1>
 
-    <div class="entry">
-        <h1>Create an Arctus account</h1>
+            <div class="content">
+                <span class="label">E-Mail</span>
+                <input
+                    type="email"
+                    name="email"
+                    minlength="6"
+                    maxlength="64"
+                    autocomplete="email"
+                    placeholder="your@email.here"
+                    aria-label="E-Mail input field"
+                    {% include 'components/email-regex.html' %}
+                    required>
 
-        <div class="content">
-            <span class="label">E-Mail</span>
-            <input type="email" placeholder="your@email.here" required>
+                <span class="label">Password</span>
 
-            <span class="label">Password</span>
-            <input type="password" placeholder="⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤" required>
+                <p>
+                    <i id="n1" class="bi bi-x-circle-fill red"></i>
+                    <i id="y1" class="bi bi-check-circle-fill green"></i>
+                    1 special character
+                </p>
+                <p>
+                    <i id="n0" class="bi bi-x-circle-fill red"></i>
+                    <i id="y0" class="bi bi-check-circle-fill green"></i>
+                    2 uppercase letters
+                </p>
+                <p>
+                    <i id="n2" class="bi bi-x-circle-fill red"></i>
+                    <i id="y2" class="bi bi-check-circle-fill green"></i>
+                    2 digits
+                </p>
+                <p>
+                    <i id="n3" class="bi bi-x-circle-fill red"></i>
+                    <i id="y3" class="bi bi-check-circle-fill green"></i>
+                    3 lowercase letters
+                </p>
+                <p>
+                    <i id="n4" class="bi bi-x-circle-fill red"></i>
+                    <i id="y4" class="bi bi-check-circle-fill green"></i>
+                    8 characters in total
+                </p>
 
-            <input type="checkbox" id="terms" required>
-            <label for="terms">I have read agree to the <a href="/terms" target="_blank">
-                Terms of Service</a> and
-                <a href="/privacy"  target="_blank">Privacy Policy</a>.
-            </label>
+                <div class="password-input">
+                    <i title="Show password (keep pressed)" aria-label="Show password button" id="showPassword" class="bi bi-eye-slash"></i>
+                    <!-- <i class="bi bi-eye"></i> -->
+                    <input
+                        id="password"
+                        name="password"
+                        required
+                        type="password"
+                        placeholder="•••••••••••"
+                        aria-label="Password input field"
+                    >
+                </div>
 
-            <button>Create</button>
+                <input type="checkbox" id="terms" aria-label="Terms of Service checkbox" required>
+                <label for="terms">I have read and agree to the <a href="/terms" target="_blank">
+                    Terms of Service</a> and
+                    <a href="/privacy"  target="_blank">Privacy Policy</a>.
+                </label>
+
+                <button type="submit" aria-label="Create account button">Create account</button>
+            </div>
         </div>
-    </div>
+    </form>
 </main>
 
 {% include 'components/end.html' %}
+<script src="/static/js/checkpass.js"></script>
+<script src="/static/js/showpass.js"></script>

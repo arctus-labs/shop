@@ -1,3 +1,11 @@
+.red {
+  color: #e64a4a;
+}
+
+.green {
+  color: #49b624;
+}
+
 .floating {
   font-size: 18px;
   z-index: 400;

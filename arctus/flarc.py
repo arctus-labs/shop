@@ -3,7 +3,9 @@
 import os
 import flask
 import logging
+import flask_wtf.csrf
 
+from flask_sqlalchemy import SQLAlchemy
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from . import helpers
@@ -16,20 +18,29 @@ class Flarc(flask.Flask):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.secret_key = os.urandom(24)
-        self.config['MAX_CONTENT_LENGTH'] = 1 * 1000 * 1000 * 1000 # 1 GB
 
+        # Jinja cleanup
         self.jinja_env.trim_blocks = True
         self.jinja_env.lstrip_blocks = True
 
+        # Misc
         self.wsgi_app = ProxyFix(self.wsgi_app, x_proto=1)
 
+        self.secret_key = os.urandom(24)
+        self.config['MAX_CONTENT_LENGTH'] = 1 * 1000 * 1000 * 1000 # 1 GB
         self.config.from_mapping({
             "CACHE_TYPE": "SimpleCache",
             "DEBUG": True,
             "CACHE_DEFAULT_TIMEOUT": 300
         })
 
+        # CSRF Protection
+        self.csrf = flask_wtf.CSRFProtect(self)
+
+        # Database
+        self.db = SQLAlchemy()
+        self.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accounts.db'
+        self.db.init_app(self)
 
         @self.context_processor
         def injector():
@@ -47,10 +58,14 @@ class Flarc(flask.Flask):
         def error_400(error):
             """400 error page."""
 
-            return flask.render_template('error/400.html', title='400', message=error), 400
+            return flask.render_template('noctus/templates/error/400.html', title='400', message=error), 400
 
         @self.errorhandler(404)
         def error_404(*args, **kwargs):
             """404 error page."""
 
-            return flask.render_template('error/404.html', title='404'), 404
+            return flask.render_template('noctus/templates/error/404.html', title='404'), 404
+
+        @self.errorhandler(flask_wtf.csrf.CSRFError)
+        def csrf_error(error):
+            return flask.render_template('noctus/templates/error/400.html', title='400', message=f'CSRFError: {error}'), 400

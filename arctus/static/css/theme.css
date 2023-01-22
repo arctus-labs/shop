@@ -8,6 +8,7 @@ html.dark {
   --bg: #080808;
   --bg-ish: #1a1a1b;
   --alt: rgba(255, 255, 255, 0.0705882353);
+  --input: rgba(255, 255, 255, 0.1254901961);
   --accent: #3185e6;
 }
 
@@ -16,5 +17,6 @@ html.light {
   --bg: #ebf0f6;
   --bg-ish: #ccced1;
   --alt: rgba(0, 0, 0, 0.0941176471);
+  --input: rgba(255, 255, 255, 0.3647058824);
   --accent: #3185e6;
 }/*# sourceMappingURL=theme.css.map */

@@ -17,7 +17,6 @@ def page_loader(subpath):
     """Loads pages from their directory."""
 
     pages = helpers.get_config('pages')
-    print(subpath)
 
     if not subpath in pages:
         return flask.abort(404)

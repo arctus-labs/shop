@@ -24,9 +24,15 @@ div.entry
         width: 70%
         text-align: left
 
+        p
+            margin-block: 0
+            margin-bottom: 5px
+
 span.label
-    margin-block: 0.5rem
     display: block
+    margin-block: 0.5rem
+
+    font-weight: bold
 
 input
     width: 100%
@@ -34,19 +40,34 @@ input
     font-size: 20px
     color: var(--fg)
     border: none
-    background: $glow
+    background: var(--input)
     border-radius: $edge
     outline: 5px solid transparent
 
     &:focus
-        outline-color: $smoke
+        outline-color: $green-translucent
 
-input[type=checkbox]
-    width: auto
-    margin-block: 1rem
-    transform: scale(1.4)
+        &:invalid
+            outline-color: $red-translucent
 
-    cursor: pointer
+    &[type=checkbox]
+        width: auto
+        margin-block: 1rem
+        transform: scale(1.4)
 
-    &:focus
-        outline: none
+        cursor: pointer
+
+        &:focus
+            outline: none
+
+div.password-input
+    position: relative
+
+    i
+        cursor: pointer
+        font-size: 24px
+        position: absolute
+        top: 50%
+        right: -3rem
+        transform: translate(-50%, -50%)
+        text-shadow: 0 0 5px var(--input), 0 0 5px var(--input), 0 0 5px var(--input)

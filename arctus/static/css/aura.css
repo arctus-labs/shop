@@ -17,10 +17,15 @@ div.entry div.content {
   width: 70%;
   text-align: left;
 }
+div.entry div.content p {
+  margin-block: 0;
+  margin-bottom: 5px;
+}
 
 span.label {
-  margin-block: 0.5rem;
   display: block;
+  margin-block: 0.5rem;
+  font-weight: bold;
 }
 
 input {
@@ -29,14 +34,16 @@ input {
   font-size: 20px;
   color: var(--fg);
   border: none;
-  background: rgba(255, 255, 255, 0.3647058824);
+  background: var(--input);
   border-radius: 5px;
   outline: 5px solid transparent;
 }
 input:focus {
-  outline-color: rgba(255, 255, 255, 0.1254901961);
+  outline-color: rgba(36, 218, 109, 0.2470588235);
 }
-
+input:focus:invalid {
+  outline-color: rgba(230, 74, 74, 0.3098039216);
+}
 input[type=checkbox] {
   width: auto;
   margin-block: 1rem;
@@ -45,4 +52,17 @@ input[type=checkbox] {
 }
 input[type=checkbox]:focus {
   outline: none;
+}
+
+div.password-input {
+  position: relative;
+}
+div.password-input i {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  right: -3rem;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 5px var(--input), 0 0 5px var(--input), 0 0 5px var(--input);
 }/*# sourceMappingURL=aura.css.map */

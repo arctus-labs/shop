@@ -1,0 +1,49 @@
+<style>
+    .email {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: #000000;
+    }
+    .email a {
+        color: #000000;
+        text-decoration: none;
+    }
+    .email a:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+    .email .header {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .email .footer {
+        font-size: 10px;
+        padding-top: 10px;
+    }
+</style>
+
+<div class="email">
+    <img src="https://arctus.me/static/assets/brand/embed.png" height="100px">
+    <div class="header">
+        Welcome to Arctus!
+    </div>
+    <p>
+        Thank you for registering with Arctus. To complete your registration, please click the link below.
+    </p>
+    <p>
+        <a href="{{ url }}">
+            {{ url }}
+        </a>
+    </p>
+    <p>
+        If you did not register with Arctus, this could mean a malicious actor is trying to register an account under your E-Mail address.
+        <br>
+        If that's the case, please contact us.
+    </p>
+    <div class="footer">
+        Contact us: <a href="https://arctus.me/contact">https://arctus.me/contact</a>.
+        <br>
+        This E-Mail was automatically generated.
+    </div>
+</div>
