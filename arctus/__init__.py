@@ -3,6 +3,8 @@ from . import flarc
 from . import helpers
 
 app = flarc.Flarc(__name__)
+db = app.db
+from . import models
 
 from arctus.noctus.noctus import noctus
 from arctus.accounts.accounts import accounts

@@ -9,11 +9,11 @@ function checkPassword() {
         check = regex_checks[checkNo];
 
         if (password.match(check)) {
-            document.getElementById(`y${checkNo}`).style.display = "initial";
-            document.getElementById(`n${checkNo}`).style.display = "none";
+            document.getElementById(`y${checkNo}`).style.display = 'initial';
+            document.getElementById(`n${checkNo}`).style.display = 'none';
         } else {
-            document.getElementById(`y${checkNo}`).style.display = "none";
-            document.getElementById(`n${checkNo}`).style.display = "initial";
+            document.getElementById(`y${checkNo}`).style.display = 'none';
+            document.getElementById(`n${checkNo}`).style.display = 'initial';
             validity = 'Password must contain at least 8 characters, 2 uppercase letters, 2 numbers, 3 lowercase letters and 1 special character';
         }
     }

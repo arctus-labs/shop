@@ -1,14 +1,14 @@
 function openMobileNav() {
-    const navPopup = document.getElementById("mobnav");
-    const navIcon = document.getElementById("mobnav-icon");
+    const navPopup = document.getElementById('mobnav');
+    const navIcon = document.getElementById('mobnav-icon');
 
-    navPopup.classList.toggle("foldout");
-    navIcon.classList.toggle("open");
+    navPopup.classList.toggle('foldout');
+    navIcon.classList.toggle('open');
 
-    if (navPopup.classList.contains("foldout")) {
-        navPopup.style.height = "100vh";
+    if (navPopup.classList.contains('foldout')) {
+        navPopup.style.height = '100vh';
     } else {
-        navPopup.style.height = "0";
+        navPopup.style.height = '0';
     }
 }
 

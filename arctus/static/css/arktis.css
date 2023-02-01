@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
   overflow-x: hidden;
   background: var(--bg);
 }
@@ -22,7 +23,7 @@ header {
   top: 0;
   left: 0;
   height: auto;
-  padding: 1rem;
+  padding-block: 2rem;
   padding-inline: 4rem;
   position: -webkit-sticky;
   position: sticky;
@@ -37,8 +38,11 @@ header * {
   color: #ebf0f6;
   text-decoration: none;
 }
+header div.left {
+  width: 500px;
+}
 header.short {
-  padding-block: 10px;
+  padding-block: 15px;
 }
 header.short .brand img {
   height: 40px;
@@ -46,16 +50,16 @@ header.short .brand img {
 header.short .title-group {
   opacity: 0;
 }
-header .brand {
+header div.brand {
   display: flex;
   align-items: center;
 }
-header .brand img {
+header div.brand img {
   height: 50px;
   margin-right: 20px;
 }
-header .brand h1 {
-  font-size: 26px;
+header div.brand span.brand-title {
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
@@ -182,7 +186,7 @@ blockquote {
   opacity: 0.9;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.1254901961);
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2235294118);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2235294118);
 }
 
 main h3 {

@@ -4,6 +4,9 @@
 
 html
     scroll-behavior: smooth
+    // set scroll offset
+    scroll-padding-top: 4rem
+
     overflow-x: hidden
     background: var(--bg)
 
@@ -21,11 +24,12 @@ body
     background: var(--bg)
     transition: background 0s !important
 
+
 header
     top: 0
     left: 0
     height: auto
-    padding: 1rem
+    padding-block: 2rem
     padding-inline: 4rem
     position: sticky
     z-index: 1000
@@ -41,8 +45,11 @@ header
         color: $white
         text-decoration: none
 
+    div.left
+        width: 500px
+
     &.short
-        padding-block: 10px
+        padding-block: 15px
 
         .brand img
             height: 40px
@@ -50,7 +57,7 @@ header
         .title-group
             opacity: 0
 
-    .brand
+    div.brand
         display: flex
         align-items: center
 
@@ -58,8 +65,8 @@ header
             height: 50px
             margin-right: 20px
 
-        h1
-            font-size: 26px
+        span.brand-title
+            font-size: 20px
             font-weight: bold
             margin: 0
 
@@ -190,7 +197,7 @@ blockquote
     opacity: 0.9
     border-radius: $edge
     background: $smoke
-    box-shadow: 10px 10px 50px $shadow
+    box-shadow: 20px 20px 50px $shadow
 
 main
     h3

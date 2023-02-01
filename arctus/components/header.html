@@ -1,14 +1,17 @@
 <header id="header">
-    <a href="{{'javascript:window.scrollTo(0, 0);' if title == 'Home' else '/'}}">
-        <div class="brand">
-            <img src="/static/assets/brand/arctus-icon.png">
-            <div class="title-group">
-                <h1>Arctus</h1>
-                <span class="brand-subtitle" style="background: rgb(192, 12, 9)">Aktuell in der Entwicklungsphase!</span>
-                <!-- <span class="brand-subtitle">Made in Germany - seit 2022</span> -->
+    <div class="left">
+        <a href="#main">
+            <div class="brand">
+                <img alt="Arctus-Icon" width="50px" height="50px" src="/static/assets/brand/arctus-icon.png">
+                <div class="title-group">
+                    <span class="brand-title">Arctus</span>
+                    <br>
+                    <!-- <span class="brand-subtitle" style="background: rgb(192, 12, 9)">Aktuell in der Entwicklungsphase!</span> -->
+                    <span class="brand-subtitle">Made in Germany</span>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 
     <div class="links">
         {% include 'components/nav.html' %}

@@ -11,8 +11,7 @@ def get_sort_options(sort_key: str) -> list:
         'price': 'Preis',
         'storage': 'Speicherkapazität',
         'gpu': 'Grafikleistung',
-        'cpu': 'Prozessorleistung',
-        'value': 'Preis-Leistungs-Verhältnis'
+        'cpu': 'Prozessorleistung'
     }
 
     sort_options = []
