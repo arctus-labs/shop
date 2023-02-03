@@ -1,13 +1,15 @@
 import os
 import smtplib
 
+from dotenv import load_dotenv
 from email.mime.text import MIMEText
 
-from dotenv import load_dotenv
+from .. import config
+
 load_dotenv()
 
 def send(to: str, subject: str, html: str):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP(config.SMTP_SERVER, config.SMTP_PORT)
     server.starttls()
 
     email_from = os.getenv('GMAIL_EMAIL')
@@ -15,7 +17,7 @@ def send(to: str, subject: str, html: str):
 
     msg = MIMEText(html, 'html')
     msg['Subject'] = subject
-    msg['From'] = 'Team Arctus <team@arctus.me>'
+    msg['From'] = config.EMAIL_SENDER
     msg['To'] = to
 
     server.sendmail(email_from, to, msg.as_string())

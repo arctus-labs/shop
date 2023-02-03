@@ -1,5 +1,6 @@
 flask
 pyyaml
 Flask-WTF
+flask-login
 python-dotenv
 flask-SQLAlchemy

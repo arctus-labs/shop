@@ -1,6 +1,13 @@
+import sqlalchemy
+
 from .. import db
 from .. import app
-from .. import models
+from ..models import *
 
-with app.app_context():
-    db.session.add(models.User(username='admin', email='admin@arctus.me'))
+def already_exists(email):
+    """Check if an email already exists in the database.
+    """
+    try:
+        return bool(User.query.filter_by(email=email).first())
+    except sqlalchemy.exc.OperationalError:
+        return False

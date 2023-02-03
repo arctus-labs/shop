@@ -24,7 +24,8 @@
         "arctus/noctus/__pycache__": true,
         "arctus/accounts/__pycache__": true,
         "arctus/static/css/aura.css": true,
-        "arctus/static/css/aura.css.map": true
+        "arctus/static/css/aura.css.map": true,
+        "__pycache__": true
     },
     "hide-files.files": [
         ".vscode",
@@ -45,7 +46,8 @@
         "arctus/noctus/__pycache__",
         "arctus/accounts/__pycache__",
         "arctus/static/css/aura.css",
-        "arctus/static/css/aura.css.map"
+        "arctus/static/css/aura.css.map",
+        "__pycache__"
     ],
     "cSpell.words": [
         "arctus",
@@ -53,6 +55,7 @@
         "errorhandler",
         "flarc",
         "Flarc",
+        "noctus",
         "QICK",
         "Radeon",
         "Ryzen",
